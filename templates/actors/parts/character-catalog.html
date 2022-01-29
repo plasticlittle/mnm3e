@@ -1,0 +1,25 @@
+{{>
+      "systems/mnm3e/templates/items/parts/list-sheet.html"
+      items=advantages
+      sections=advantageSections
+      header=(localize "MNM3E.Advantages")
+      type="advantage"
+      canFavorite=true
+}}
+{{>
+      "systems/mnm3e/templates/items/parts/list-sheet.html"
+      items=powers
+      sections=powerSections
+      header=(localize "MNM3E.Powers")
+      type="power"
+      canFavorite=true
+}}
+{{#if (or data.equipmentCost data.attributes.equipmentPoints)}}<div class="equipment-properties flexrow"><label>{{ localize "MNM3E.EquipmentPoints" }}:</label><span>{{ data.equipmentCost }} / {{ data.attributes.equipmentPoints }}</span></div>{{/if}}
+{{>
+      "systems/mnm3e/templates/items/parts/list-sheet.html"
+      items=equipment
+      sections=equipmentSections
+      header=(localize "MNM3E.Equipment")
+      type="equipment"
+      canFavorite=true
+}}

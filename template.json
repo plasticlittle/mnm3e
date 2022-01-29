@@ -1,0 +1,395 @@
+{
+    "Actor": {
+        "types": ["character", "npc"],
+        "templates": {
+            "common": {
+                "abilities": {
+                    "str": {
+                        "rank": 0
+                    },
+                    "sta": {
+                        "rank": 0
+                    },
+                    "agl": {
+                        "rank": 0
+                    },
+                    "dex": {
+                        "rank": 0
+                    },
+                    "fgt": {
+                        "rank": 0
+                    },
+                    "int": {
+                        "rank": 0
+                    },
+                    "awe": {
+                        "rank": 0
+                    },
+                    "pre": {
+                        "rank": 0
+                    }
+                },
+                "defenses": {
+                    "dge": {
+                        "rank": 0,
+                        "ability": "agl"
+                    },
+                    "pry": {
+                        "rank": 0,
+                        "ability": "fgt"
+                    },
+                    "frt": {
+                        "rank": 0,
+                        "ability": "sta"
+                    },
+                    "tgh": {
+                        "rank": 0,
+                        "ability": "sta"
+                    },
+                    "wil": {
+                        "rank": 0,
+                        "ability": "awe"
+                    }
+                },
+                "attributes": {
+                    "powerLevel": 0,
+                    "equipmentPoints": 0,
+                    "initiative": 0,
+                    "penaltyPoints": 0,
+                    "movement": {
+                        "burrowing": 0,
+                        "flight": 0,
+                        "leaping": 0,
+                        "speed": 0,
+                        "swim": 0,
+                        "teleport": 0
+                    }
+                },
+                "info": {
+                    "groupAffiliation": "",
+                    "identity": "",
+                    "baseOfOperations": "",
+                    "background": "",
+                    "notes": "",
+                    "complications": ""
+                }
+            },
+            "creature": {
+                "skills": {
+                    "acr": {
+                        "type": "static",
+                        "ability": "agl",
+                        "trainedOnly": true,
+                        "actions": ["move", "free"],
+                        "base": 0,
+                        "data": {
+                            "rank": 0
+                        }
+                    },
+                    "ath": {
+                        "type": "static",
+                        "base": 0,
+                        "ability": "str",
+                        "trainedOnly": false,
+                        "actions": ["move"],
+                        "data": {
+                            "rank": 0
+                        }
+                    },
+                    "cco": {
+                        "type": "dynamic",
+                        "ability": "fgt",
+                        "trainedOnly": false,
+                        "actions": ["standard"],
+                        "base": 0,
+                        "data": {}
+                    },
+                    "dec": {
+                        "type": "static",
+                        "ability": "pre",
+                        "trainedOnly": false,
+                        "actions": ["standard"],
+                        "base": 0,
+                        "data": {
+                            "rank": 0
+                        }
+                    },
+                    "exp": {
+                        "type": "dynamic",
+                        "ability": "int",
+                        "trainedOnly": true,
+                        "actions": [],
+                        "base": 0,
+                        "data": {}
+                    },
+                    "ins": {
+                        "type": "static",
+                        "base": 0,
+                        "ability": "awe",
+                        "trainedOnly": false,
+                        "actions": ["free"],
+                        "data": {
+                            "rank": 0
+                        }
+                    },
+                    "itm": {
+                        "type": "static",
+                        "ability": "pre",
+                        "trainedOnly": false,
+                        "actions": ["standard"],
+                        "base": 0,
+                        "data": {
+                            "rank": 0
+                        }
+                    },
+                    "inv": {
+                        "type": "static",
+                        "ability": "int",
+                        "trainedOnly": true,
+                        "actions": [],
+                        "base": 0,
+                        "data": {
+                            "rank": 0
+                        }
+                    },
+                    "prc": {
+                        "type": "static",
+                        "base": 0,
+                        "ability": "awe",
+                        "trainedOnly": false,
+                        "actions": ["free"],
+                        "data": {
+                            "rank": 0
+                        }
+                    },
+                    "per": {
+                        "type": "static",
+                        "base": 0,
+                        "ability": "pre",
+                        "trainedOnly": false,
+                        "actions": [],
+                        "data": {
+                            "rank": 0
+                        }
+                    },
+                    "rco": {
+                        "type": "dynamic",
+                        "ability": "dex",
+                        "trainedOnly": false,
+                        "actions": ["standard"],
+                        "base": 0,
+                        "data": {}
+                    },
+                    "slt": {
+                        "type": "static",
+                        "ability": "dex",
+                        "trainedOnly": true,
+                        "actions": ["standard"],
+                        "base": 0,
+                        "data": {
+                            "rank": 0
+                        }
+                    },
+                    "ste": {
+                        "type": "static",
+                        "ability": "agl",
+                        "trainedOnly": false,
+                        "actions": ["move"],
+                        "base": 0,
+                        "data": {
+                            "rank": 0
+                        }
+                    },
+                    "tec": {
+                        "type": "static",
+                        "ability": "int",
+                        "trainedOnly": true,
+                        "actions": ["standard"],
+                        "base": 0,
+                        "data": {
+                            "rank": 0
+                        }
+                    },
+                    "tre": {
+                        "type": "static",
+                        "ability": "int",
+                        "trainedOnly": true,
+                        "actions": ["standard"],
+                        "base": 0,
+                        "data": {
+                            "rank": 0
+                        }
+                    },
+                    "vhc": {
+                        "type": "static",
+                        "ability": "dex",
+                        "trainedOnly": true,
+                        "actions": ["move"],
+                        "base": 0,
+                        "data": {
+                            "rank": 0
+                        }
+                    }
+                }
+            }
+        },
+        "character": {
+            "templates": ["common", "creature"],
+            "victoryPoints": 1,
+            "earnedCharacterPoints": 0
+        },
+        "npc": {
+            "templates": ["common", "creature"],
+            "isMinion": false
+        }
+    },
+    "Item": {
+        "types": ["advantage", "effect", "equipment", "modifier", "power"],
+        "templates": {
+            "itemDescription": {
+                "description": {
+                    "value": "",
+                    "chat": ""
+                }
+            },
+            "itemSummary": {
+                "summary": {
+                    "format": "",
+                    "position": ""
+                }
+            },
+            "activatedEffect": {
+                "activation": {
+                    "check": {
+                        "formula": {
+                            "value": []
+                        },
+                        "targetScore": {
+                            "type": {
+                                "value": ""
+                            },
+                            "custom": {
+                                "value": ""
+                            }
+                        },
+                        "rollType": {
+                            "value": ""
+                        }
+                    },
+                    "consume": {
+                        "type": {
+                            "value": ""
+                        },
+                        "target": {
+                            "value": null
+                        },
+                        "amount": {
+                            "value": null
+                        }
+                    },
+                    "duration": {
+                        "type": {
+                            "value": ""
+                        }
+                    },
+                    "range": {
+                        "area": {
+                            "value": null
+                        },
+                        "type": {
+                            "value": ""
+                        },
+                        "multiplier": {
+                            "value": null
+                        }
+                    },
+                    "uses": {
+                        "amount": {
+                            "value": 0
+                        },
+                        "max": {
+                            "value": null
+                        },
+                        "per": {
+                            "value": null
+                        }
+                    },
+                    "type": {
+                        "value": ""
+                    }
+                }
+            },
+            "actionEffect": {
+                "action": {
+                    "roll": {
+                        "attack": {
+                            "formula": {
+                                "value": []
+                            },
+                            "targetScore": {
+                                "type": {
+                                    "value": ""
+                                },
+                                "custom": {
+                                    "value": ""
+                                }
+                            },
+                            "rollType": {
+                                "value": ""
+                            }
+                        },
+                        "resist": {
+                            "formula": {
+                                "value": []
+                            },
+                            "targetScore": {
+                                "type": {
+                                    "value": ""
+                                },
+                                "custom": {
+                                    "value": ""
+                                }
+                            },
+                            "rollType": {
+                                "value": ""
+                            }
+                        }
+                    },
+                    "type": {
+                        "value": ""
+                    }
+                }
+            },
+            "scalingEffect": {
+                "rank": 1,
+                "cost": {
+                    "value": 0,
+                    "type": "",
+                    "discountPer": 1
+                }
+            }
+        },
+        "advantage": {
+            "templates": ["itemSummary", "itemDescription", "activatedEffect", "actionEffect", "scalingEffect"]
+        },
+        "effect": {
+            "templates": ["itemSummary", "itemDescription", "activatedEffect", "actionEffect", "scalingEffect"],
+            "modifiers": []
+        },
+        "modifier": {
+            "templates": ["itemSummary", "itemDescription", "activatedEffect", "actionEffect", "scalingEffect"],
+            "expressions": []
+        },
+        "power": {
+            "templates": ["itemDescription"],
+            "effects": [],
+            "powerArray": [],
+            "descriptor": ""
+        },
+        "equipment": {
+            "templates": ["itemDescription"],
+            "effects": [],
+            "descriptor": ""
+        }
+    }
+}
