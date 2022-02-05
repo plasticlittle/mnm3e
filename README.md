@@ -1,4 +1,4 @@
-# mnm3e
+# Enhanced Mutants and Masterminds System for FoundryVTT
 mnm3e - reformatted and semi migrated to version 0.9
 We want to make a fully running, actual version of Mutants and Masterminds for FoundryVtt. 
 Additionally we want to implement a XML Parser to import files from Herolabs Mutants and Mastermindes Edition.
