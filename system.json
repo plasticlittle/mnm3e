@@ -4,7 +4,7 @@
   "description": "A system to support the third edition of Mutants and Masterminds.",
   "templateVersion": 2,
   "version": "0.4.30",
-  "author": "matthewswar",
+  "author": "matthewswar, Guardian, WookieeChan",
   "scripts": [],
   "esmodules": [
     "mnm3e.js"
@@ -23,11 +23,11 @@
   "gridDistance": 5,
   "gridUnits": "ft",
   "minimumCoreVersion": "0.7.9",
-  "compatibleCoreVersion": "0.7.9",
-  "url": "https://github.com/matthewswar/foundryvtt-mutants-and-masterminds",
-  "manifest": "https://raw.githubusercontent.com/matthewswar/foundryvtt-mutants-and-masterminds/master/src/system.json",
+  "compatibleCoreVersion": "9",
+  "url": "https://github.com/plasticlittle/mnm3e",
+  "manifest": "https://github.com/plasticlittle/mnm3e/system.json",
   "download": "",
   "readme": "",
-  "bugs": "https://github.com/matthewswar/foundryvtt-mutants-and-masterminds/issues",
-  "changelog": "https://github.com/matthewswar/foundryvtt-mutants-and-masterminds/releases"
+  "bugs": "https://github.com/plasticlittle/mnm3e/issues",
+  "changelog": "https://github.com/plasticlittle/mnm3e/releases"
 }
