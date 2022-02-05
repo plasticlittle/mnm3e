@@ -22,7 +22,8 @@ export default class ItemSheet3e extends ItemSheet {
     getData(options = {}) {
         const sheetData = super.getData();
         sheetData.config = CONFIG.MNM3E;
-        sheetData.item.isOwned = this.item.isOwned;
+        console.log(this.item)
+        //sheetData.item.isOwner = this.item.isOwned;
         sheetData.parentItem = this._parentItem;
         sheetData.itemType = game.i18n.localize(`ITEM.Type${this.item.type.titleCase()}`);
         let actorData = undefined;
@@ -60,7 +61,7 @@ export default class ItemSheet3e extends ItemSheet {
                 return agg;
             }, {}),
         }));
-        sheetData.effects = prepareActiveEffectCategories(this.entity.effects);
+        sheetData.effects = prepareActiveEffectCategories(this.document.effects);
         return sheetData;
     }
     /**

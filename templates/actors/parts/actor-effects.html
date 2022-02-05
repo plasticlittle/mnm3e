@@ -1,1 +1,57 @@
-<ol class="bordered-section items-list effects-list">{{#each effects as |section sectionName|}}<li class="items-header section-header flexrow" data-effect-type="{{section.type}}"><h3 class="item-name effect-name flexrow">{{ section.label }}</h3><div class="effect-source section-name">{{ localize "MNM3E.ActiveEffectSource" }}</div><div class="effect-duration section-name">{{ localize "MNM3E.ActiveEffectDuration" }}</div>{{#if (not ../readOnly)}}<div class="item-control effect-control flexrow"><a class="effect-control" data-action="create" title="{{localize 'MNM3E.ActiveEffectCreate'}}"><i class="fas fa-plus"></i></a></div>{{/if}}</li><ol class="item-list">{{#each section.effects as |effect|}}<li class="item effect flexrow" data-effect-id="{{effect.id}}"><div class="item-name effect-name flexrow"><img class="item-image" src="{{effect.data.icon}}"/><h4>{{ effect.data.label }}</h4></div><div class="effect-source section-detail">{{ effect.sourceName }}</div><div class="effect-duration section-detail">{{ effect.duration.label }}</div>{{#if (not ../../readOnly)}}<div class="item-controls effect-controls flexrow"><a class="effect-control" data-action="toggle" title="{{ localize 'MNM3E.ActiveEffectToggle' }}"><i class="fas {{#if effect.data.disabled}}fa-check{{else}}fa-times{{/if}}"></i></a><a class="effect-control" data-action="edit" title="{{ localize 'MNM3E.ActiveEffectEdit' }}"><i class="fas fa-edit"></i></a><a class="effect-control" data-action="delete" title="{{ localize 'MNM3E.ActiveEffectDelete' }}"><i class="fas fa-trash"></i></a></div>{{/if}}</li>{{/each}}</ol>{{/each}}</ol>
+<ol class="bordered-section items-list effects-list">
+    {{#each effects as |section sectionName|}}
+        <li class="items-header section-header flexrow" data-effect-type="{{section.type}}">
+            <h3 class="item-name effect-name flexrow">
+                {{ section.label }}
+            </h3>
+            <div class="effect-source section-name">
+                {{ localize "MNM3E.ActiveEffectSource" }}
+            </div>
+            <div class="effect-duration section-name">
+                {{ localize "MNM3E.ActiveEffectDuration" }}
+            </div>
+            {{#if (not ../readOnly)}}
+                <div class="item-control effect-control flexrow">
+                    <a class="effect-control" data-action="create" title="{{localize 'MNM3E.ActiveEffectCreate'}}">
+                        <i class="fas fa-plus">
+                        </i>
+                    </a>
+                </div>
+            {{/if}}
+        </li>
+        <ol class="item-list">
+            {{#each section.effects as |effect|}}
+                <li class="item effect flexrow" data-effect-id="{{effect.id}}">
+                    <div class="item-name effect-name flexrow">
+                        <img class="item-image" src="{{effect.data.icon}}"/>
+                        <h4>
+                            {{ effect.data.label }}
+                        </h4>
+                    </div>
+                    <div class="effect-source section-detail">
+                        {{ effect.sourceName }}
+                    </div>
+                    <div class="effect-duration section-detail">
+                        {{ effect.duration.label }}
+                    </div>
+                    {{#if (not ../../readOnly)}}
+                    <div class="item-controls effect-controls flexrow">
+                        <a class="effect-control" data-action="toggle" title="{{ localize 'MNM3E.ActiveEffectToggle' }}">
+                            <i class="fas {{#if effect.data.disabled}}fa-check{{else}}fa-times{{/if}}">                            
+                            </i>
+                        </a>
+                        <a class="effect-control" data-action="edit" title="{{ localize 'MNM3E.ActiveEffectEdit' }}">
+                            <i class="fas fa-edit">                            
+                            </i>
+                        </a>
+                        <a class="effect-control" data-action="delete" title="{{ localize 'MNM3E.ActiveEffectDelete' }}">
+                            <i class="fas fa-trash">                            
+                            </i>
+                        </a>
+                    </div>
+                    {{/if}}
+                </li>
+            {{/each}}
+        </ol>
+    {{/each}}
+</ol>

@@ -1,2 +1,34 @@
-<img class="profile" src="{{item.img}}" title="{{item.name}}" data-edit="img"/><div class="header-details flexcol"><div class="titles flexrow"><h1 class="item-name"><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'MNM3E.ItemName' }}"/></h1><div class="item-subtitle"><h4 class="item-type">{{itemType}}</h4>{{#each itemSubtitles as |subtitle|}}<span class="item-subtitle">{{subtitle}}</span>{{/each}}</div></div>{{#if attributes}}<ul class="header-attributes flexrow">{{#each attributes as |attribute|}}<li><input type="text" name="{{attribute.name}}" value="{{attribute.value}}" placeholder="{{attribute.label}}"/></li>{{/each}}</ul>{{/if}}
-{{#if showSummary}}<div class="item-summary flexrow"><label>{{ localize "MNM3E.SummaryFormat" }}:</label><span>{{ data.summary.parsed }}</span><div class="summary-controls flexrow"><a class="app-button" title="{{ localize 'MNM3E.ItemSummaryBuilder' }}" data-action="summary-builder"><i class="fas fa-edit"></i></a></div></div>{{/if}}</div>
+<img class="profile" src="{{item.img}}" title="{{item.name}}" data-edit="img" />
+<div class="header-details flexcol">
+    <div class="titles flexrow">
+        <h1 class="item-name">
+            <input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'MNM3E.ItemName' }}" />
+        </h1>
+        <div class="item-subtitle">
+            <h4 class="item-type">{{itemType}}</h4>
+            {{#each itemSubtitles as |subtitle|}}
+                <span class="item-subtitle">{{subtitle}}</span>
+            {{/each}}
+        </div>
+    </div>
+    {{#if attributes}}
+        <ul class="header-attributes flexrow">
+            {{#each attributes as |attribute|}}
+                <li>
+                    <input type="text" name="{{attribute.name}}" value="{{attribute.value}}" placeholder="{{attribute.label}}" />
+                </li>
+            {{/each}}
+        </ul>
+    {{/if}}
+    {{#if showSummary}}
+        <div class="item-summary flexrow">
+            <label>{{ localize "MNM3E.SummaryFormat" }}:</label>
+            <span>{{ data.data.summary.parsed }}</span>
+            <div class="summary-controls flexrow">
+                <a class="app-button" title="{{ localize 'MNM3E.ItemSummaryBuilder' }}" data-action="summary-builder">
+                    <i class="fas fa-edit"></i>
+                </a>
+            </div>
+        </div>
+    {{/if}}
+</div>

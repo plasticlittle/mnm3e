@@ -15,7 +15,7 @@ export default class ItemSheet3eEffect extends ItemSheet3e {
      */
     getData(options = {}) {
         const sheetData = super.getData(options);
-        if (sheetData.data.action.type.value) {
+        if (sheetData.data.data.action.type.value) {
             sheetData.itemSubtitles = [game.i18n.localize(`MNM3E.EffectType${sheetData.data.action.type.value.titleCase()}`)];
         }
         return sheetData;

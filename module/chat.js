@@ -12,6 +12,7 @@ export const displayCard = async (cardType, speaker, templateData, { rollMode, f
         sound: CONFIG.sounds.dice,
         flags: chatFlags,
     };
-    ChatMessage.applyRollMode(chatData, rollMode || game.settings.get('core', 'rollMode'));
+    //ChatMessage.applyRollMode(chatData, rollMode || game.settings.get('core', 'rollMode'));
+    const messageClass = getDocumentClass("ChatMessage");
     return ChatMessage.create(chatData);
 };

@@ -19,20 +19,20 @@ export default class ActorSheet3e extends ActorSheet {
     getData() {
         const sheetData = super.getData();
         sheetData.config = CONFIG.MNM3E;
-        Object.entries(sheetData.data.abilities).forEach(([name, ability]) => {
+        Object.entries(sheetData.data.data.abilities).forEach(([name, ability]) => {
             ability.label = CONFIG.MNM3E.abilities[name];
         });
-        Object.entries(sheetData.data.skills).forEach(([name, skill]) => {
+        Object.entries(sheetData.data.data.skills).forEach(([name, skill]) => {
             skill.label = CONFIG.MNM3E.skills[name];
         });
-        Object.entries(sheetData.data.defenses).forEach(([name, defense]) => {
+        Object.entries(sheetData.data.data.defenses).forEach(([name, defense]) => {
             defense.label = CONFIG.MNM3E.defenses[name];
         });
         this.prepareItems(sheetData);
-        const speedMeasurement = getMeasurement('distance', sheetData.data.attributes.movement.speed);
+        const speedMeasurement = getMeasurement('distance', sheetData.data.data.attributes.movement.speed);
         sheetData.movement = {
-            main: `${CONFIG.MNM3E.movement.speed} ${sheetData.data.attributes.movement.speed} (${speedMeasurement.value} ${speedMeasurement.units})`,
-            special: Object.entries(sheetData.data.attributes.movement).map(([name, value]) => {
+            main: `${CONFIG.MNM3E.movement.speed} ${sheetData.data.data.attributes.movement.speed} (${speedMeasurement.value} ${speedMeasurement.units})`,
+            special: Object.entries(sheetData.data.data.attributes.movement).map(([name, value]) => {
                 if (name == 'speed' || value == 0) {
                     return undefined;
                 }
@@ -40,21 +40,21 @@ export default class ActorSheet3e extends ActorSheet {
                 return `${name.titleCase()} ${value} (${measurement.value} ${measurement.units})`;
             }).filter(m => m).reduce((prev, current) => prev ? `${prev}, ${current}` : current, ''),
         };
-        sheetData.effects = prepareActiveEffectCategories(this.entity.effects);
+        sheetData.effects = prepareActiveEffectCategories(this.document.effects);
         sheetData.summary = [
             {
                 name: 'data.info.identity',
-                value: sheetData.data.info.identity,
+                value: sheetData.data.data.info.identity,
                 localizedKey: 'MNM3E.Identity',
             },
             {
                 name: 'data.info.groupAffiliation',
-                value: sheetData.data.info.groupAffiliation,
+                value: sheetData.data.data.info.groupAffiliation,
                 localizedKey: 'MNM3E.GroupAffiliation',
             },
             {
                 name: 'data.info.baseOfOperations',
-                value: sheetData.data.info.baseOfOperations,
+                value: sheetData.data.data.info.baseOfOperations,
                 localizedKey: 'MNM3E.BaseOfOperations',
             },
         ];
@@ -75,7 +75,7 @@ export default class ActorSheet3e extends ActorSheet {
             'advantage',
             'equipment',
         ].forEach(itemType => html.find(`.item-${itemType}-controls .item-control`).on('click', this.onEmbeddedItemEvent.bind(this)));
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find('.item .item-image').on('click', this.onItemRoll.bind(this));
             html.find('.max-points .lock-button').on('click', this.onMaxPointsOverrideToggle.bind(this));
         }
@@ -134,7 +134,7 @@ export default class ActorSheet3e extends ActorSheet {
     onItemRoll(event) {
         event.preventDefault();
         const itemID = event.currentTarget.closest('.item').dataset.itemId;
-        const item = this.actor.getOwnedItem(itemID);
+        const item = this.actor.items.get(itemID);
         item?.roll();
     }
     onEmbeddedItemEvent(event) {
@@ -153,7 +153,7 @@ export default class ActorSheet3e extends ActorSheet {
                 this.actor.createOwnedItem(itemData);
                 break;
             case 'edit':
-                item = this.actor.getOwnedItem(closestItem?.dataset.itemId);
+                item = this.actor.items.get(closestItem?.dataset.itemId);
                 item?.sheet.render(true);
                 break;
             case 'delete':
@@ -161,7 +161,7 @@ export default class ActorSheet3e extends ActorSheet {
                 break;
             case 'favorite':
                 const favoriteKey = 'isFavorite';
-                item = this.actor.getOwnedItem(closestItem?.dataset.itemId);
+                item = this.actor.items.get(closestItem?.dataset.itemId);
                 item?.setFlag('mnm3e', favoriteKey, !(item.getFlag('mnm3e', favoriteKey) ?? false));
                 break;
         }
@@ -189,7 +189,7 @@ export default class ActorSheet3e extends ActorSheet {
             summary.slideUp(200, () => summary.remove());
         }
         else {
-            const item = this.actor.getOwnedItem(li.data('item-id'));
+            const item = this.actor.items.get(li.data('item-id'));
             const div = await item.sheet.renderListItemContents();
             li.append(div.hide());
             div.slideDown(200);

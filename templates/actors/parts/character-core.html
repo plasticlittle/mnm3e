@@ -1,17 +1,105 @@
-<div class="core-container flexrow"><div class="bordered-section ability-section flexcol"><h3 class="section-header">{{ localize "MNM3E.Abilities" }}<a class="config-button" title="{{ localize 'MNM3E.AbilityConfigure' }}" data-action="score-config" data-score-path="data.abilities" data-score-config-path="abilities"><i class="fas fa-cog"></i></a></h3><ul class="scores ability-scores flexrow">{{#each data.abilities as |ability key|}}<li class="ability flexcol" data-ability="{{key}}"><label class="ability-name box-title rollable">{{ability.label}}</label><span class="score ability-score">{{ability.total}}</span></li>{{/each}}</ul></div><div class="flexcol"><div class="bordered-section defense-section flexcol"><h3 class="section-header">{{ localize "MNM3E.Defenses" }}<a class="config-button" title="{{ localize 'MNM3E.DefenseConfigure' }}" data-action="score-config" data-score-path="data.defenses" data-score-config-path="defenses"><i class="fas fa-cog"></i></a></h3><ul class="scores defenses-list flexrow">{{#each data.defenses as |defense key|}}<li class="defense flexcol" data-defense="{{key}}"><label class="defense-name box-title rollable">{{defense.label}}</label><span class="score defense-score">{{ defense.total }}</span></li>{{/each}}</ul></div><div class="body-section flexrow"><div class="bordered-section skill-section flexcol"><h3 class="section-header">{{ localize "MNM3E.Skills" }}<a class="config-button" title="{{ localize 'MNM3E.SkillConfigure' }}" data-action="score-config" data-score-path="data.skills" data-score-config-path="skills"><i class="fas fa-cog"></i></a></h3><ul class="scores skills-list">{{#each data.skills as |skill key|}}
-{{#if (eq skill.type "dynamic")}}<li class="skill flexrow {{#if (and skill.trainedOnly (not skill.isTrained))}}untrained{{/if}}" data-skill="{{key}}"><label class="skill-name {{#if (or skill.isTrained (not skill.trainedOnly))}}rollable{{/if}}">{{skill.label}}</label><span class="score skill-score">{{numberFormat skill.base decimals=0 sign=true}}</span></li>{{#if (not (emptyObj skill.data))}}
-{{#each skill.data as |subskill subKey|}}<li class="subskill flexrow" data-skill="{{key}}" data-subskill="{{subKey}}"><label class="subskill-name {{#if (or skill.isTrained (not skill.trainedOnly))}}rollable{{/if}}">- {{subskill.displayName}}</label><span class="score skill-score">{{numberFormat subskill.total decimals=0 sign=true}}</span></li>{{/each}}
-{{/if}}
-{{else}}<li class="skill flexrow {{#if (and skill.trainedOnly (not skill.isTrained))}}untrained{{/if}}" data-skill="{{key}}"><label class="skill-name {{#if (or skill.isTrained (not skill.trainedOnly))}}rollable{{/if}}">{{skill.label}}</label><span class="score skill-score">{{numberFormat skill.data.total decimals=0 sign=true}}</span></li>{{/if}}
-{{/each}}</ul></div><div class="favorites-section flexcol">{{#each favorites}}
-{{#if this.items}}
-{{>
-      "systems/mnm3e/templates/items/parts/list-sheet.html"
-      ..
-      items=this.items
-      header=(localize this.label)
-      type=this.type
-      hideControls=true
-}}
-{{/if}}
-{{/each}}</div></div></div></div>
+<div class="core-container flexrow">
+      <div class="bordered-section ability-section flexcol">
+            <h3 class="section-header">
+                  {{ localize "MNM3E.Abilities" }}
+                  <a class="config-button" title="{{ localize 'MNM3E.AbilityConfigure' }}" data-action="score-config" data-score-path="data.abilities" data-score-config-path="abilities">
+                        <i class="fas fa-cog">                              
+                        </i>
+                  </a>
+            </h3>
+            <ul class="scores ability-scores flexrow">
+                  {{#each data.data.abilities as |ability key|}}
+                        <li class="ability flexcol" data-ability="{{key}}">
+                              <label class="ability-name box-title rollable">
+                                    {{ability.label}}
+                              </label>
+                              <span class="score ability-score">
+                                    {{ability.total}}
+                              </span>
+                        </li>
+                  {{/each}}
+            </ul>
+      </div>
+      <div class="flexcol">
+            <div class="bordered-section defense-section flexcol">
+                  <h3 class="section-header">
+                        {{ localize "MNM3E.Defenses" }}
+                        <a class="config-button" title="{{ localize 'MNM3E.DefenseConfigure' }}" data-action="score-config" data-score-path="data.defenses" data-score-config-path="defenses">
+                              <i class="fas fa-cog">                                    
+                              </i>
+                        </a>
+                  </h3>
+                  <ul class="scores defenses-list flexrow">
+                        {{#each data.data.defenses as |defense key|}}
+                              <li class="defense flexcol" data-defense="{{key}}">
+                                    <label class="defense-name box-title rollable">
+                                          {{defense.label}}
+                                    </label>
+                                    <span class="score defense-score">
+                                          {{defense.total}}
+                                    </span>
+                              </li>
+                        {{/each}}
+                  </ul>
+            </div>
+            <div class="body-section flexrow">
+                  <div class="bordered-section skill-section flexcol">
+                        <h3 class="section-header">
+                              {{ localize "MNM3E.Skills" }}
+                              <a class="config-button" title="{{ localize 'MNM3E.SkillConfigure' }}" data-action="score-config" data-score-path="data.skills" data-score-config-path="skills">
+                                    <i class="fas fa-cog"></i>
+                              </a>
+                        </h3>
+                        <ul class="scores skills-list">
+                              {{#each data.data.skills as |skill key|}}
+                                    {{#if (eq skill.type "dynamic")}}
+                                          <li class="skill flexrow {{#if (and skill.trainedOnly (not skill.isTrained))}}untrained{{/if}}" data-skill="{{key}}">
+                                                <label class="skill-name {{#if (or skill.isTrained (not skill.trainedOnly))}}rollable{{/if}}">
+                                                      {{skill.label}}
+                                                </label>
+                                                <span class="score skill-score">
+                                                      {{numberFormat skill.base decimals=0 sign=true}}
+                                                </span>
+                                          </li>
+                                    {{#if (not (emptyObj skill.data))}}
+                                          {{#each skill.data as |subskill subKey|}}
+                                                <li class="subskill flexrow" data-skill="{{key}}" data-subskill="{{subKey}}">
+                                                      <label class="subskill-name {{#if (or skill.isTrained (not skill.trainedOnly))}}rollable{{/if}}">-
+                                                            {{subskill.displayName}}
+                                                      </label>
+                                                      <span class="score skill-score">
+                                                            {{numberFormat subskill.total decimals=0 sign=true}}
+                                                      </span>
+                                                </li>
+                                          {{/each}}
+                                    {{/if}}
+                                    {{else}}
+                                          <li class="skill flexrow {{#if (and skill.trainedOnly (not skill.isTrained))}}untrained{{/if}}" data-skill="{{key}}">
+                                                <label class="skill-name {{#if (or skill.isTrained (not skill.trainedOnly))}}rollable{{/if}}">
+                                                      {{skill.label}}
+                                                </label>
+                                                <span class="score skill-score">
+                                                      {{numberFormat skill.data.total decimals=0 sign=true}}
+                                                </span>
+                                          </li>
+                                    {{/if}}
+                              {{/each}}
+                        </ul>
+                  </div>
+                  <div class="favorites-section flexcol">
+                        {{#each favorites}}
+                              {{#if this.items}}
+                                    {{>
+                                    "systems/mnm3e/templates/items/parts/list-sheet.html"
+                                    ..
+                                    items=this.items
+                                    header=(localize this.label)
+                                    type=this.type
+                                    hideControls=true
+                                    }}
+                              {{/if}}
+                        {{/each}}
+                  </div>
+            </div>
+      </div>
+</div>

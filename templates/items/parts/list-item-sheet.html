@@ -1,2 +1,15 @@
-<div class="list-item-summary flexcol">{{{ data.description.value }}}
-{{#if data.powerArray}}<ol class="item-list subitem-list">{{#each data.powerArray as |power|}}<li class="item flexrow" data-power-index="{{@index}}"><div class="item-name flexrow"><div class="item-image" style="background-image: url('{{power.img}}')"></div><h4>{{power.name}}</h4></div></li>{{/each}}</ol>{{/if}}</div>
+<div class="list-item-summary flexcol">
+    {{{ data.data.description.value }}}
+    {{#if data.data.powerArray}}
+        <ol class="item-list subitem-list">
+            {{#each data.data.powerArray as |power|}}
+                <li class="item flexrow" data-power-index="{{@index}}">
+                    <div class="item-name flexrow">
+                        <div class="item-image" style="background-image: url('{{power.img}}')"></div>
+                        <h4>{{power.name}}</h4>
+                    </div>
+                </li>
+            {{/each}}
+        </ol>
+    {{/if}}
+</div>

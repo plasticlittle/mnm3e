@@ -26,13 +26,20 @@ export const onManagedActiveEffect = (event, owner) => {
     const effect = listElement.dataset.effectId ? owner.effects.get(listElement.dataset.effectId) : null;
     switch (target.dataset.action) {
         case 'create':
-            return ActiveEffect.create({
+            /*return ActiveEffect.create({
                 label: game.i18n.localize('MNM3E.ActiveEffectNew'),
                 icon: 'icons/svg/aura.svg',
                 origin: owner.uuid,
                 'duration.rounds': listElement.dataset.effectType === 'temporary' ? 1 : undefined,
                 disabled: listElement.dataset.effectType === 'inactive',
-            }, owner).create();
+            }, owner)//.create(); */
+            return owner.createEmbeddedDocuments("ActiveEffect", [{
+                label: game.i18n.localize('MNM3E.ActiveEffectNew'),
+                icon: 'icons/svg/aura.svg',
+                origin: owner.uuid,
+                'duration.rounds': listElement.dataset.effectType === 'temporary' ? 1 : undefined,
+                disabled: listElement.dataset.effectType === 'inactive',
+            }]);              
         case 'edit':
             return effect.sheet.render(true);
         case 'delete':
@@ -41,6 +48,7 @@ export const onManagedActiveEffect = (event, owner) => {
             return effect.update({ disabled: !effect.data.disabled });
     }
 };
+
 export const prepareActiveEffectCategories = (activeEffects) => {
     const categories = {
         temporary: {

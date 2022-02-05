@@ -1,4 +1,4 @@
-export default class ScoreConfig extends BaseEntitySheet {
+export default class ScoreConfig extends DocumentSheet {
     constructor(dataPath, configPath, ...args) {
         super(...args);
         this._dataPath = dataPath;
@@ -22,13 +22,13 @@ export default class ScoreConfig extends BaseEntitySheet {
      * @override
      */
     get title() {
-        return `${game.i18n.localize('MNM3E.ScoreConfig')}: ${this.entity.name}`;
+        return `${game.i18n.localize('MNM3E.ScoreConfig')}: ${this.document.name}`;
     }
     /**
      * @override
      */
     getData() {
-        const scores = getProperty(this.entity.data, this._dataPath);
+        const scores = getProperty(this.document.data, this._dataPath);
         Object.entries(scores).forEach(([name, score]) => {
             score.label = getProperty(CONFIG.MNM3E, this._configPath)[name];
         });
@@ -49,7 +49,7 @@ export default class ScoreConfig extends BaseEntitySheet {
      * @override
      */
     async _updateObject(event, formData) {
-        const allScores = getProperty(this.entity.data, this._dataPath);
+        const allScores = getProperty(this.document.data, this._dataPath);
         const expandedFormData = expandObject(formData);
         Object.entries(allScores).forEach(([scoreName, score]) => {
             if (Array.isArray(score)) {
@@ -65,7 +65,7 @@ export default class ScoreConfig extends BaseEntitySheet {
         ev.preventDefault();
         const button = ev.currentTarget;
         const scoreType = button.dataset.scoreType;
-        const allScores = getProperty(this.entity.data, this._dataPath);
+        const allScores = getProperty(this.document.data, this._dataPath);
         const targetEntry = Object.entries(allScores).find(([name]) => name == scoreType);
         if (!targetEntry) {
             throw new Error(`Could not find type '${scoreType}'`);
@@ -109,12 +109,12 @@ export default class ScoreConfig extends BaseEntitySheet {
                 };
                 const cleanedName = scoreName.replace(/\s/g, '');
                 targetScore.data[cleanedName] = newScore;
-                await this.entity.update({ [`${this._dataPath}.${scoreType}`]: targetScore });
+                await this.document.update({ [`${this._dataPath}.${scoreType}`]: targetScore });
                 break;
             case 'delete':
                 const name = button.dataset.subscoreName;
                 delete targetScore.data[name];
-                await this.entity.update({ [`${this._dataPath}.${scoreType}.data.-=${name}`]: null });
+                await this.document.update({ [`${this._dataPath}.${scoreType}.data.-=${name}`]: null });
                 break;
             default:
                 throw new Error(`Unknown score action: ${button.dataset.action}`);

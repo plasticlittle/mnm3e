@@ -1,34 +1,134 @@
-<div class="traits-section flexcol"><div class="bordered-section ability-section flexcol"><h3 class="section-header">{{ localize 'MNM3E.Abilities' }}<a class="config-button" title="{{ localize 'MNM3E.AbilityConfigure' }}" data-action="score-config" data-score-path="data.abilities" data-score-config-path="abilities"><i class="fas fa-cog"></i></a></h3><ul class="scores ability-scores flexrow">{{#each data.abilities as |ability abilityName|}}<li class="score ability flexcol" data-ability="{{abilityName}}"><label class="ability-name rollable">{{ titleCase (lookup ../config.abilityAbbreviations abilityName) }}</label><span class="ability-score">{{ ability.total }}</span></li>{{/each}}</ul></div><div class="bordered-section defense-section flexcol"><h3 class="section-header">{{ localize "MNM3E.Defenses" }}<a class="config-button" title="{{ localize 'MNM3E.DefenseConfigure' }}" data-action="score-config" data-score-path="data.defenses" data-score-config-path="defenses"><i class="fas fa-cog"></i></a></h3><ul class="scores defense-scores flexrow">{{#each data.defenses as |defense defenseName|}}<li class="score defense flexcol" data-defense="{{defenseName}}"><label class="defense-name rollable">{{ titleCase (lookup ../config.defenseAbbreviations defenseName) }}</label><span class="defense-score">{{ defense.total }}</span></li>{{/each}}</ul></div><div class="bordered-section skill-section flexcol"><h3 class="section-header">{{ localize 'MNM3E.Skills' }}<a class="config-button" title="{{ localize 'MNM3E.SkillConfigure' }}" data-action="score-config" data-score-path="data.skills" data-score-config-path="skills"><i class="fas fa-cog"></i></a></h3><ul class="scores skills-list">{{#each data.skills as |skill skillName|}}
-{{#if (eq skill.type "static")}}
-{{#if (gt skill.data.rank 0)}}<li class="skill flexrow" data-skill="{{skillName}}"><label class="skill-name rollable">{{ skill.label }}</label><span class="score skill-score">{{ numberFormat skill.data.rank sign=true }}{{#if (ne skill.data.total skill.data.rank)}} ({{ numberFormat skill.data.total sign=true }}){{/if}}</span></li>{{/if}}
-{{else}}
-{{#each skill.data as |subskill subKey|}}
-{{#if (gt skill.data.rank 0)}}<li class="skill flexrow" data-skill="{{skillName}}"><label class="skill-name rollable">{{ skill.label }}</label><span class="score skill-score"> {{ numberFormat skill.data.rank sign=true }}{{#if (ne skill.data.total skill.data.rank)}} ({{ numberFormat skill.data.total sign=true }}){{/if}}</span></li>{{/if}}
-{{#if (gt subskill.rank 0)}}<li class="subskill flexrow" data-skill="{{skillName}}" data-subskill="{{subKey}}"><label class="skill-name rollable">{{ subskill.displayName }}</label><span class="score skill-score"> {{ numberFormat subskill.rank sign=true }}{{#if (ne subskill.total subskill.rank)}} ({{ numberFormat subskill.total sign=true }}){{/if}}</span></li>{{/if}}
-{{/each}}
-{{/if}}
-{{/each}}</ul></div></div><div class="catalog-section">{{>
+<div class="traits-section flexcol">
+      <div class="bordered-section ability-section flexcol">
+            <h3 class="section-header">
+                  {{ localize 'MNM3E.Abilities' }}
+                  <a class="config-button" title="{{ localize 'MNM3E.AbilityConfigure' }}" data-action="score-config" data-score-path="data.abilities" data-score-config-path="abilities">
+                        <i class="fas fa-cog"></i>
+                  </a>
+            </h3>
+            <ul class="scores ability-scores flexrow">
+                  {{#each data.data.abilities as |ability abilityName|}}
+                        <li class="score ability flexcol" data-ability="{{abilityName}}">
+                              <label class="ability-name rollable">{{ titleCase (lookup ../config.abilityAbbreviations abilityName) }}</label>
+                              <span class="ability-score">{{ ability.total }}</span>
+                        </li>
+                  {{/each}}
+            </ul>
+      </div>
+      <div class="bordered-section defense-section flexcol">
+            <h3 class="section-header">
+                  {{ localize "MNM3E.Defenses" }}
+                  <a class="config-button" title="{{ localize 'MNM3E.DefenseConfigure' }}" data-action="score-config" data-score-path="data.defenses" data-score-config-path="defenses">
+                        <i class="fas fa-cog"></i>
+                  </a>
+            </h3>
+            <ul class="scores defense-scores flexrow">
+                  {{#each data.data.defenses as |defense defenseName|}}
+                        <li class="score defense flexcol" data-defense="{{defenseName}}">
+                              <label class="defense-name rollable">
+                                    {{ titleCase (lookup ../config.defenseAbbreviations defenseName) }}
+                              </label>
+                              <span class="defense-score">
+                                    {{ defense.total }}
+                              </span>
+                        </li>
+                  {{/each}}
+            </ul>
+      </div>
+      <div class="bordered-section skill-section flexcol">
+            <h3 class="section-header">
+                  {{ localize 'MNM3E.Skills' }}
+                  <a class="config-button" title="{{ localize 'MNM3E.SkillConfigure' }}" data-action="score-config" data-score-path="data.skills" data-score-config-path="skills">
+                        <i class="fas fa-cog"></i>
+                  </a>
+            </h3>
+            <ul class="scores skills-list">
+                  {{#each data.data.skills as |skill skillName|}}
+                        {{#if (eq skill.type "static")}}
+                              {{#if (gt skill.data.rank 0)}}
+                                    <li class="skill flexrow" data-skill="{{skillName}}">
+                                          <label class="skill-name rollable">
+                                                {{ skill.label }}
+                                          </label>
+                                          <span class="score skill-score">
+                                                {{numberFormat skill.data.rank sign=true }}
+                                                {{#if (ne skill.data.total skill.data.rank)}} 
+                                                      ({{numberFormat skill.data.total sign=true }})
+                                                {{/if}}
+                                          </span>
+                                    </li>
+                              {{/if}}
+                        {{else}}
+                              {{#each skill.data as |subskill subKey|}}
+                                    {{#if (gt skill.data.rank 0)}}
+                                          <li class="skill flexrow" data-skill="{{skillName}}">
+                                                <label class="skill-name rollable">
+                                                      {{ skill.label }}
+                                                </label>
+                                                <span class="score skill-score"> 
+                                                      {{numberFormat skill.data.rank sign=true }}
+                                                      {{#if (ne skill.data.total skill.data.rank)}} 
+                                                            ({{numberFormat skill.data.total sign=true }})
+                                                      {{/if}}
+                                                </span>
+                                          </li>
+                                    {{/if}}
+                                    {{#if (gt subskill.rank 0)}}
+                                          <li class="subskill flexrow" data-skill="{{skillName}}" data-subskill="{{subKey}}">
+                                                <label class="skill-name rollable">
+                                                      {{ subskill.displayName }}
+                                                </label>
+                                                <span class="score skill-score"> 
+                                                      {{ numberFormat subskill.rank sign=true }}
+                                                      {{#if (ne subskill.total subskill.rank)}} 
+                                                            ({{ numberFormat subskill.total sign=true}})
+                                                      {{/if}}
+                                                </span>
+                                          </li>
+                                    {{/if}}
+                              {{/each}}
+                        {{/if}}
+                  {{/each}}
+            </ul>
+      </div>
+</div>
+<div class="catalog-section">
+      
+      {{>
       "systems/mnm3e/templates/items/parts/list-sheet.html"
       items=advantages
       sections=advantageSections
       header=(localize "MNM3E.Advantages")
       type="advantage"
       iconClass="fa-sm"
-}}
-{{>
+      }}
+
+      {{>
       "systems/mnm3e/templates/items/parts/list-sheet.html"
       items=powers
       sections=powerSections
       header=(localize "MNM3E.Powers")
       type="power"
       iconClass="fa-sm"
-}}
-{{#if (or data.equipmentCost data.attributes.equipmentPoints)}}<div class="equipment-properties flexrow"><label>{{ localize "MNM3E.EquipmentPoints" }}:</label><span>{{ data.equipmentCost }} / {{ data.attributes.equipmentPoints }}</span></div>{{/if}}
-{{>
+      }}
+      
+      {{#if (or data.data.equipmentCost data.data.attributes.equipmentPoints)}}
+            <div class="equipment-properties flexrow">
+                  <label>
+                        {{localize "MNM3E.EquipmentPoints" }}:
+                  </label>
+                  <span>
+                        {{ data.data.equipmentCost }} / {{data.data.attributes.equipmentPoints }}
+                  </span>
+            </div>
+      {{/if}}
+      
+      {{>
       "systems/mnm3e/templates/items/parts/list-sheet.html"
       items=equipment
       sections=equipmentSections
       header=(localize "MNM3E.Equipment")
       type="equipment"
       iconClass="fa-sm"
-}}</div>
+      }}
+</div>

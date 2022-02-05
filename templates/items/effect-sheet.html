@@ -1,8 +1,40 @@
-<form class="{{cssClass}} item-sheet-effect flexcol" autocomplete="off"><header class="sheet-header">{{> "systems/mnm3e/templates/items/parts/header-sheet.html" showSummary=true }}</header><nav class="sheet-navigation tabs" data-group="primary"><a class="item active" data-tab="description">{{ localize "MNM3E.Description" }}</a><a class="item" data-tab="details">{{ localize "MNM3E.Details" }}</a><a class="item" data-tab="modifiers">{{ localize "MNM3E.Modifiers" }}</a><a class="item" data-tab="effects">{{ localize "MNM3E.Effects" }}</a></nav><section class="sheet-body"><div class="tab description flexrow active" data-group="primary" data-tab="description"><div class="item-properties flexcol">{{> "systems/mnm3e/templates/items/parts/cost-sheet.html" }}</div><div class="item-editor flexcol">{{editor content=data.description.value target="data.description.value" button=true owner=owner editable=editable}}</div></div><div class="tab details" data-group="primary" data-tab="details">{{> "systems/mnm3e/templates/items/parts/activations-sheet.html" }}
-{{> "systems/mnm3e/templates/items/parts/actions-sheet.html" }}</div><div class="tab modifiers flexcol" data-group="primary" data-tab="modifiers">{{>
-      "systems/mnm3e/templates/items/parts/list-sheet.html"
-      items=data.modifiers
-      dataPath="data.modifiers"
-      header=(localize "MNM3E.Modifiers")
-      type="modifier"
-}}</div><div class="tab effects" data-group="primary" data-tab="effects">{{> "systems/mnm3e/templates/actors/parts/actor-effects.html" }}</div></section></form>
+<form class="{{cssClass}} item-sheet-effect flexcol" autocomplete="off">
+      <header class="sheet-header">
+            {{> "systems/mnm3e/templates/items/parts/header-sheet.html" showSummary=true }}
+      </header>
+      <nav class="sheet-navigation tabs" data-group="primary">
+            <a class="item active" data-tab="description">
+                  {{ localize "MNM3E.Description" }}
+            </a>
+            <a class="item" data-tab="details">
+                  {{ localize "MNM3E.Details" }}
+            </a>
+            <a class="item" data-tab="modifiers">
+                  {{ localize "MNM3E.Modifiers" }}
+            </a>
+            <a class="item" data-tab="effects">
+                  {{ localize "MNM3E.Effects" }}
+            </a>
+      </nav>
+
+      <section class="sheet-body">
+            <div class="tab description flexrow active" data-group="primary" data-tab="description">
+                  <div class="item-properties flexcol">
+                        {{> "systems/mnm3e/templates/items/parts/cost-sheet.html" }}
+                  </div>
+                  <div class="item-editor flexcol">
+                        {{editor content=data.description.value target="data.description.value" button=true owner=owner editable=editable}}
+                  </div>
+            </div>
+            <div class="tab details" data-group="primary" data-tab="details">
+                  {{> "systems/mnm3e/templates/items/parts/activations-sheet.html" }}
+                  {{> "systems/mnm3e/templates/items/parts/actions-sheet.html" }}
+            </div>
+            <div class="tab modifiers flexcol" data-group="primary" data-tab="modifiers">
+                  {{> "systems/mnm3e/templates/items/parts/list-sheet.html" items=data.data.modifiers dataPath="data.data.modifiers" header=(localize "MNM3E.Modifiers") type="modifier"}}
+            </div>
+            <div class="tab effects" data-group="primary" data-tab="effects">
+                  {{> "systems/mnm3e/templates/actors/parts/actor-effects.html" }}
+            </div>
+      </section>
+</form>
