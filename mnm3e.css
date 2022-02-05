@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Raider Crusader";
+  src: url("fonts/raidercrusadersemistraight.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 #chat .degree-calculator {
   flex: 0;
 }
@@ -295,6 +302,7 @@
   border-bottom: 1px groove rgba(25, 140, 255, 0.1);
   text-transform: uppercase;
   white-space: nowrap;
+  font-family: "Raider Crusader", sans-serf;
 }
 .mnm3e.sheet.actor.character .core-container .scores {
   margin: 0;
@@ -367,7 +375,7 @@
   background: #198cff;
   border-radius: 0 5px 0 5px;
   color: #e4e4e4;
-  font-family: Charcoal, sans-serif;
+  font-family: "Raider Crusader", sans-serif;
   padding: 3px;
   margin-bottom: 0;
 }
@@ -459,7 +467,7 @@
 }
 .mnm3e.sheet .tox-edit-area {
   border: 1px solid rgba(20, 90, 160, 0.2);
-  font-family: Charcoal, sans-serif;
+  font-family: "Raider Crusader", sans-serif;
   background-color: rgba(224, 224, 224, 0.527);
 }
 .mnm3e.sheet .tabs {
@@ -477,7 +485,7 @@
 }
 .mnm3e.sheet .tabs .item {
   font-size: 100%;
-  font-family: Charcoal, sans-serif;
+  font-family: "Raider Crusader", sans-serif;
   color: white;
   padding: 1%;
 }
