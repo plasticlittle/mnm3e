@@ -190,6 +190,7 @@ export default class ItemSheet3e extends ItemSheet {
         }
     }
     async newChildItem(sourceItem) {
+        // https://foundryvtt.com/api/Item.html - actor in initialization vector
         const newItem = await Item.create(sourceItem, { temporary: true });
         newItem.options.actor = this.item.actor;
         newItem.data._id = sourceItem._id;

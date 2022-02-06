@@ -15,7 +15,7 @@ export default class ItemSheet3eEffect extends ItemSheet3e {
      */
     getData(options = {}) {
         const sheetData = super.getData(options);
-        sheetData.itemSubtitles = [game.i18n.localize(sheetData.data.cost.value >= 0 ? 'MNM3E.ModifierExtra' : 'MNM3E.ModifierFlaw')];
+        sheetData.itemSubtitles = [game.i18n.localize(sheetData.data.data.cost.value >= 0 ? 'MNM3E.ModifierExtra' : 'MNM3E.ModifierFlaw')];
         return sheetData;
     }
     /**
