@@ -1,8 +1,15 @@
+@font-face {
+  font-family: "Raider Crusader";
+  src: url("fonts/raidercrusadersemistraight.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 #chat .degree-calculator {
   flex: 0;
 }
 #chat .degree-calculator input {
-  background-color: #e4e4e4;
+  background-color: #e4e4e491;
   flex: 0 0 50px;
 }
 #chat .degree-calculator span {
@@ -15,17 +22,22 @@
   margin-right: 5px;
 }
 #chat .degree-calculator .degrees.no-input {
-  background-color: #e4e4e4;
+  background-color: #e4e4e491;
   border-radius: 3px;
   border: 1px solid #7a7971;
 }
 
+.sheet{
+  max-width: 662px;
+  max-height: 620px;
+}
 .mnm3e.sheet.app.summary-builder .form-fields {
   flex: 0;
 }
 .mnm3e.sheet.app.summary-builder input {
   background: rgba(0, 0, 0, 0.05);
   border: 1px solid #7a7971;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.app.score-config form {
   border: 1px solid #145aa0;
@@ -46,6 +58,7 @@
   width: auto;
   background-color: #198cff;
   color: white;
+  font-family: "Raider Crusader", sans-serif;
   text-align: center;
   padding: 2px;
   border-radius: 6px;
@@ -61,6 +74,7 @@
 }
 .mnm3e.sheet.app.score-config .score-headers span:not(:first-child) {
   flex: 0 1 50px;
+  font-family: "Raider Crusader", sans-serif;
   text-align: center;
 }
 .mnm3e.sheet.app.score-config .score-control {
@@ -74,6 +88,7 @@
 .mnm3e.sheet.app.score-config .form-group.input input, .mnm3e.sheet.app.score-config .form-group.input-input input {
   flex: 0 1 50px;
   text-align: center;
+  font-family: "Raider Crusader", sans-serif;
   border: unset;
   border-left: 2px solid rgba(0, 0, 0, 0.1);
 }
@@ -114,21 +129,27 @@
 }
 .mnm3e.sheet.actor .sheet-header .header-details ul.attributes li.attribute {
   border-top: 1px solid rgba(20, 90, 160, 0.2);
+  font-family: "Raider Crusader", sans-serif;
   text-align: center;
   border-left: 1px solid rgba(20, 90, 160, 0.2);
   border-right: 1px solid rgba(20, 90, 160, 0.2);
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.actor .sheet-header .header-details ul.attributes li.attribute .attribute-name {
+  font-family: "Raider Crusader", sans-serif;
   border-bottom: 1px groove rgba(25, 140, 255, 0.1);
   margin: 4px 8px 2px;
 }
 .mnm3e.sheet.actor .sheet-header .header-details ul.attributes li:last-child {
+  font-family: "Raider Crusader", sans-serif;
   border-right: none;
 }
 .mnm3e.sheet.actor .sheet-header .header-details ul.attributes .movement .attribute-footer {
+  font-family: "Raider Crusader", sans-serif;
   font-size: 10px;
 }
 .mnm3e.sheet.actor h3.section-header {
+  font-family: "Raider Crusader", sans-serif;
   text-align: center;
   flex: 0 1 auto;
   position: relative;
@@ -138,6 +159,7 @@
   display: none;
   bottom: 15%;
   margin-left: 2px;
+  font-family: "Raider Crusader", sans-serif;
   font-weight: normal;
 }
 .mnm3e.sheet.actor h3.section-header:hover .config-button {
@@ -148,28 +170,35 @@
   margin-right: 6px;
 }
 .mnm3e.sheet.actor .skill-section .untrained {
+  font-family: "Raider Crusader", sans-serif;
   color: grey;
 }
 .mnm3e.sheet.actor .skill-section .subskill-name {
+  font-family: "Raider Crusader", sans-serif;
   margin-left: 10px;
 }
 .mnm3e.sheet.actor .skill-section .skill-score {
+  font-family: "Raider Crusader", sans-serif;
   text-align: right;
   padding-left: 20px;
   padding-right: 10px;
 }
 .mnm3e.sheet.actor .skill-section ul {
+  font-family: "Raider Crusader", sans-serif;
   padding-left: 10px;
   white-space: nowrap;
 }
 .mnm3e.sheet.actor .item-list .item-controls {
+  font-family: "Raider Crusader", sans-serif;
   flex: 0 1 50px;
 }
 .mnm3e.sheet.actor .notes {
+  font-family: "Raider Crusader", sans-serif;
   overflow: hidden;
 }
 .mnm3e.sheet.actor .notes .notes-entries {
-  background: #e4e4e4;
+  font-family: "Raider Crusader", sans-serif;
+  background: #e4e4e491;
   border-radius: 5px;
   margin: 8px;
   padding: 4px;
@@ -180,6 +209,7 @@
   border-bottom: 1px groove rgba(25, 140, 255, 0.1);
   margin-bottom: 0.5rem;
   padding-bottom: 0.25rem;
+  font-family: "Raider Crusader", sans-serif;
   font-size: 20px;
   font-weight: bold;
 }
@@ -200,6 +230,7 @@
   position: absolute;
   top: 2.5px;
   right: 5px;
+  font-family: "Raider Crusader", sans-serif;
   font-size: 1.25em;
 }
 .mnm3e.sheet.actor .notes .background-info {
@@ -214,6 +245,7 @@
   height: 18px;
   line-height: 16px;
   margin: 4px 8px 2px;
+  font-family: "Raider Crusader", sans-serif;
   font-size: 18px;
   white-space: nowrap;
   border-bottom: 1px solid #c9c7b8;
@@ -234,6 +266,7 @@
   border: 1px solid #145aa0;
   border-radius: 0 5px 0 5px;
   background: rgba(128, 128, 128, 0.1);
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.actor.character .sheet-header .header-details .top-info .header-powerlevel .header-power {
   display: flex;
@@ -241,21 +274,26 @@
   white-space: nowrap;
   justify-content: flex-end;
   flex-direction: row;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.actor.character .sheet-header .header-details .top-info .header-powerlevel .header-power input {
   flex: 0 1 30px;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.actor.character .sheet-header .header-details .top-info .header-powerlevel .max-points {
   position: relative;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.actor.character .sheet-header .header-details .top-info .header-powerlevel .max-points .lock-button {
   position: absolute;
   display: none;
   margin-top: 5px;
   margin-left: -15px;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.actor.character .sheet-header .header-details .top-info .header-powerlevel .max-points:hover .lock-button {
   display: block;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.actor.character .cost-breakdown {
   flex: 0 1 auto;
@@ -265,9 +303,11 @@
   border-bottom: none;
   padding-top: 2px;
   text-align: center;
+  font-family: "Raider Crusader", sans-serif;
   font-size: 12px;
 }
 .mnm3e.sheet.actor.character .cost-breakdown .point-cost span {
+  font-family: "Raider Crusader", sans-serif;
   font-size: 12px;
   padding-left: 3px;
 }
@@ -295,12 +335,13 @@
   border-bottom: 1px groove rgba(25, 140, 255, 0.1);
   text-transform: uppercase;
   white-space: nowrap;
+  font-family: "Raider Crusader", sans-serf;
 }
 .mnm3e.sheet.actor.character .core-container .scores {
   margin: 0;
   padding-left: 2px;
   padding-right: 2px;
-  background-color: #e4e4e4;
+  background-color: #e4e4e491;
 }
 .mnm3e.sheet.actor.character .core-container .scores .ability {
   border-bottom: 1px solid #3b545e;
@@ -312,14 +353,17 @@
   height: 30px;
   width: 36px;
   margin: 0 auto;
+  font-family: "Raider Crusader", sans-serif;
   font-size: 20px;
 }
 .mnm3e.sheet.actor.character .core-container .ability-section {
   text-align: center;
   margin-right: 6px;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.actor.character .core-container .defense {
   text-align: center;
+  font-family: "Raider Crusader", sans-serif;
   border-right: 1px solid rgba(20, 90, 160, 0.2);
 }
 .mnm3e.sheet.actor.character .core-container .defense:last-child {
@@ -342,11 +386,15 @@
 }
 
 .window-app .window-content {
-  background: #eeebeb;
-  background-size: cover;
+  background-image: url("assets/images/59427.jpg");
+  background-size: 662px 620px;
+  max-width: 662px;
+  max-height: 620px;
+  background-repeat: no-repeat;
 }
 
 .mnm3e.sheet .rollable:hover {
+  transform: rotate(2deg);
   text-shadow: 0 0 8px red;
 }
 .mnm3e.sheet .sheet-header {
@@ -366,8 +414,8 @@
 .mnm3e.sheet .section-header {
   background: #198cff;
   border-radius: 0 5px 0 5px;
-  color: #e4e4e4;
-  font-family: Charcoal, sans-serif;
+  color: #e4e4e491;
+  font-family: "Raider Crusader", sans-serif;
   padding: 3px;
   margin-bottom: 0;
 }
@@ -376,9 +424,10 @@
   border-top: none;
   border-radius: 0 5px 0 0;
   flex: 0;
-  background-color: #e4e4e4;
+  background-color: #e4e4e491;
 }
 .mnm3e.sheet .items-header {
+  font-family: "Raider Crusader", sans-serif;
   text-align: left;
   padding-left: 10px;
   margin: 0;
@@ -390,10 +439,12 @@
 .mnm3e.sheet .items-header .section-name {
   margin: 0;
   flex: 1;
+  font-family: "Raider Crusader", sans-serif;
   text-align: center;
   padding-right: 10px;
 }
 .mnm3e.sheet .items-header .item-control, .mnm3e.sheet .items-header .effect-control {
+  font-family: "Raider Crusader", sans-serif;
   text-align: right;
   flex: 0 1 75px;
 }
@@ -424,6 +475,7 @@
 .mnm3e.sheet .items-list .item-list .item .section-detail, .mnm3e.sheet .items-list .item-list .item .item-controls {
   border-left: 2px solid rgba(0, 0, 0, 0.1);
   text-align: center;
+  font-family: "Raider Crusader", sans-serif;
   margin: auto;
 }
 .mnm3e.sheet .items-list .item-list .item .section-detail {
@@ -448,7 +500,7 @@
   margin-left: 5px;
 }
 .mnm3e.sheet .editor {
-  background: #e4e4e4;
+  background: #e4e4e491;
   border-radius: 5px;
   padding: 2px;
 }
@@ -459,7 +511,7 @@
 }
 .mnm3e.sheet .tox-edit-area {
   border: 1px solid rgba(20, 90, 160, 0.2);
-  font-family: Charcoal, sans-serif;
+  font-family: "Raider Crusader", sans-serif;
   background-color: rgba(224, 224, 224, 0.527);
 }
 .mnm3e.sheet .tabs {
@@ -477,7 +529,7 @@
 }
 .mnm3e.sheet .tabs .item {
   font-size: 100%;
-  font-family: Charcoal, sans-serif;
+  font-family: "Raider Crusader", sans-serif;
   color: white;
   padding: 1%;
 }
@@ -503,11 +555,13 @@
 .mnm3e.sheet input[type=number] {
   background: none;
   border: 1px solid transparent;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet input[type=text]:hover, .mnm3e.sheet input[type=text]:focus,
 .mnm3e.sheet input[type=number]:hover,
 .mnm3e.sheet input[type=number]:focus {
   border: 1px solid black;
+  font-family: "Raider Crusader", sans-serif;
 }
 
 .mnm3e.chat-card .hidable-toggle:hover {
@@ -531,11 +585,14 @@
 }
 .mnm3e.chat-card .card-content .descriptor, .mnm3e.chat-card .card-content .effect-summary {
   font-weight: bold;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.chat-card .card-content .effect-roll-type {
+  font-family: "Raider Crusader", sans-serif;
   text-align: left;
 }
 .mnm3e.chat-card .card-content .effect-versus {
+  font-family: "Raider Crusader", sans-serif;
   text-align: right;
 }
 .mnm3e.chat-card .card-content .card-description {
@@ -550,6 +607,7 @@
   border-top: 1px groove rgba(25, 140, 255, 0.1);
 }
 .mnm3e.chat-card .card-content .roll-request .effect-roll-type {
+  font-family: "Raider Crusader", sans-serif;
   text-align: center;
 }
 .mnm3e.chat-card .card-content .roll-request:last-of-type {
@@ -559,6 +617,7 @@
   border-bottom: none;
 }
 .mnm3e.chat-card .card-content .effect-footer span {
+  font-family: "Raider Crusader", sans-serif;
   font-size: 10px;
   padding-left: 5px;
   padding-right: 5px;
@@ -571,10 +630,11 @@
   background: #eeebeb;
 }
 #chat-log .chat-message .effect-button {
-  background: #e4e4e4;
+  background: #e4e4e491;
 }
 
 .four-fail, .three-fail, .two-fail, .one-fail, .one-success, .two-success, .three-success, .four-success {
+  font-family: "Raider Crusader", sans-serif;
   font-size: 20px;
   font-weight: bold;
   position: relative;
@@ -623,6 +683,7 @@
   flex: 0;
   border: 1px solid #145aa0;
   border-radius: 0 5px 0 5px;
+  font-family: "Raider Crusader", sans-serif;
   font-size: 16px;
   margin: 2px 2px 0 2px;
 }
@@ -645,6 +706,7 @@
 .mnm3e.sheet.actor.npc .traits-section .bordered-section:not(.skill-section) .scores .score {
   border: 1px solid rgba(20, 90, 160, 0.2);
   text-align: center;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.actor.npc .traits-section .bordered-section:not(.skill-section) .scores .score.ability {
   flex: 1 0 25%;
@@ -684,10 +746,12 @@
 }
 .mnm3e.sheet.item.power .sheet-body .description .power-properties .summary label {
   flex: 0 1 auto;
+  font-family: "Raider Crusader", sans-serif;
   font-size: 16px;
 }
 .mnm3e.sheet.item.power .sheet-body .description .power-properties .summary span {
   padding: 0 5px;
+  font-family: "Raider Crusader", sans-serif;
   font-size: 14.4px;
 }
 
@@ -700,6 +764,7 @@
 }
 .mnm3e.sheet.item .sheet-header .header-details .item-name input {
   margin: 0;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.item .sheet-header .header-details .header-attributes {
   align-items: center;
@@ -708,35 +773,44 @@
   list-style: none;
   border-top: 1px solid rgba(20, 90, 160, 0.2);
   border-bottom: 1px solid rgba(20, 90, 160, 0.2);
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.item .sheet-header .header-details .item-subtitle {
   flex: 0 1 auto;
   text-align: right;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.item .sheet-header .header-details .item-summary {
   align-items: center;
   border-top: 1px solid rgba(20, 90, 160, 0.2);
   border-bottom: 1px solid rgba(20, 90, 160, 0.2);
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.item .sheet-header .header-details .item-summary > * {
   flex: 0 1 auto;
   margin-left: 5px;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.item .sheet-header .header-details .item-summary .app-button {
   display: none;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.item .sheet-header .header-details .item-summary:hover .app-button {
   display: inline-flex;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.item .sheet-navigation.tabs {
   margin-top: 4px;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.item .sheet-body {
+  font-family: "Raider Crusader", sans-serif;
   border: 3px solid #198cff;
   border-top: none;
   padding: 6px;
 }
 .mnm3e.sheet.item .sheet-body .editor {
+  font-family: "Raider Crusader", sans-serif;
   margin: 5px 0;
 }
 .mnm3e.sheet.item .sheet-body .form-group:not(.form-group.expanding-group) {
@@ -749,6 +823,7 @@
 }
 .mnm3e.sheet.item .sheet-body .form-group:not(.form-group.expanding-group) input, .mnm3e.sheet.item .sheet-body .form-group:not(.form-group.expanding-group) select {
   background: rgba(255, 255, 255, 0.25);
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.item .sheet-body .item-properties {
   margin-right: 5px;
@@ -761,11 +836,14 @@
 }
 .mnm3e.sheet.item .sheet-body .item-properties .form-group input {
   text-align: right;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.item .sheet-body .item-properties .form-group.input-input span {
   padding: 0 5px;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.item .sheet-body .details .form-header, .mnm3e.sheet.item .sheet-body .details .formula-builder-header, .mnm3e.sheet.item .sheet-body .overrides .form-header, .mnm3e.sheet.item .sheet-body .overrides .formula-builder-header {
+  font-family: "Raider Crusader", sans-serif;
   font-size: 16px;
   font-weight: bold;
 }
@@ -776,6 +854,7 @@
 .mnm3e.sheet.item .sheet-body .details .form-group.effect-uses span, .mnm3e.sheet.item .sheet-body .overrides .form-group.effect-uses span {
   flex: 0 1 20px;
   text-align: center;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.item .sheet-body .details .form-group.expanding-group .formula-content, .mnm3e.sheet.item .sheet-body .overrides .form-group.expanding-group .formula-content {
   margin-left: 10px;
@@ -787,9 +866,11 @@
 }
 .mnm3e.sheet.item .sheet-body .details .form-group.expanding-group .formula-content .formula-builder-header a, .mnm3e.sheet.item .sheet-body .overrides .form-group.expanding-group .formula-content .formula-builder-header a {
   text-align: right;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.item .sheet-body .details .form-group.expanding-group .formula-content .formula-builder > input, .mnm3e.sheet.item .sheet-body .overrides .form-group.expanding-group .formula-content .formula-builder > input {
   flex: 1;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.item .sheet-body .details .form-group.expanding-group .formula-content .formula-builder > :first-child, .mnm3e.sheet.item .sheet-body .details .form-group.expanding-group .formula-content .formula-builder > :last-child, .mnm3e.sheet.item .sheet-body .overrides .form-group.expanding-group .formula-content .formula-builder > :first-child, .mnm3e.sheet.item .sheet-body .overrides .form-group.expanding-group .formula-content .formula-builder > :last-child {
   flex: 0;
@@ -802,6 +883,7 @@
   border: none;
   cursor: unset;
   background: none;
+  font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.item .sheet-body .details .form-group.expanding-group .formula-content .formula-builder a, .mnm3e.sheet.item .sheet-body .overrides .form-group.expanding-group .formula-content .formula-builder a {
   margin-left: auto;
