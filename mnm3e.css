@@ -9,7 +9,7 @@
   flex: 0;
 }
 #chat .degree-calculator input {
-  background-color: #e4e4e4;
+  background-color: #e4e4e491;
   flex: 0 0 50px;
 }
 #chat .degree-calculator span {
@@ -22,7 +22,7 @@
   margin-right: 5px;
 }
 #chat .degree-calculator .degrees.no-input {
-  background-color: #e4e4e4;
+  background-color: #e4e4e491;
   border-radius: 3px;
   border: 1px solid #7a7971;
 }
@@ -194,7 +194,7 @@
 }
 .mnm3e.sheet.actor .notes .notes-entries {
   font-family: "Raider Crusader", sans-serif;
-  background: #e4e4e4;
+  background: #e4e4e491;
   border-radius: 5px;
   margin: 8px;
   padding: 4px;
@@ -337,7 +337,7 @@
   margin: 0;
   padding-left: 2px;
   padding-right: 2px;
-  background-color: #e4e4e4;
+  background-color: #e4e4e491;
 }
 .mnm3e.sheet.actor.character .core-container .scores .ability {
   border-bottom: 1px solid #3b545e;
@@ -382,8 +382,9 @@
 }
 
 .window-app .window-content {
-  background: #eeebeb;
-  background-size: cover;
+  background-image: url("assets/images/59427.jpg");
+  background-size: 662px 620px;
+  background-repeat: no-repeat;
 }
 
 .mnm3e.sheet .rollable:hover {
@@ -406,7 +407,7 @@
 .mnm3e.sheet .section-header {
   background: #198cff;
   border-radius: 0 5px 0 5px;
-  color: #e4e4e4;
+  color: #e4e4e491;
   font-family: "Raider Crusader", sans-serif;
   padding: 3px;
   margin-bottom: 0;
@@ -416,7 +417,7 @@
   border-top: none;
   border-radius: 0 5px 0 0;
   flex: 0;
-  background-color: #e4e4e4;
+  background-color: #e4e4e491;
 }
 .mnm3e.sheet .items-header {
   font-family: "Raider Crusader", sans-serif;
@@ -492,7 +493,7 @@
   margin-left: 5px;
 }
 .mnm3e.sheet .editor {
-  background: #e4e4e4;
+  background: #e4e4e491;
   border-radius: 5px;
   padding: 2px;
 }
@@ -622,7 +623,7 @@
   background: #eeebeb;
 }
 #chat-log .chat-message .effect-button {
-  background: #e4e4e4;
+  background: #e4e4e491;
 }
 
 .four-fail, .three-fail, .two-fail, .one-fail, .one-success, .two-success, .three-success, .four-success {

@@ -8,8 +8,8 @@ export default class ActorSheet3e extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ['mnm3e', 'sheet', 'actor'],
-            width: 740,
-            height: 730,
+            width: 662,
+            height: 620,
             tabs: [{ navSelector: '.sheet-navigation', contentSelector: '.sheet-body', initial: 'core' }]
         });
     }
