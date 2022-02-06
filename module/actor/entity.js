@@ -1,5 +1,6 @@
 import { displayCard } from "../chat.js";
 import { calculateDegrees } from "../dice.js";
+
 export default class Actor3e extends Actor {
     /**
      * @override
@@ -108,6 +109,8 @@ export default class Actor3e extends Actor {
                 break;
         }
     }
+
+    // to check with functionable resist check!!
     async rollResist(dc, targetScore) {
         let formula = '1d20';
         if (targetScore.type.value != 'custom') {
@@ -132,12 +135,57 @@ export default class Actor3e extends Actor {
         return displayCard('check', ChatMessage.getSpeaker({ actor: this, token: this.token }), templateData);
     }
     async rollAbility(abilityId) {
+        console.log(this.data.data.abilities[abilityId].total) 
         return this.rollScore(CONFIG.MNM3E.abilities[abilityId], this.data.data.abilities[abilityId].total);
     }
     async rollDefense(defenseId) {
         const formula = `${this.data.data.defenses[defenseId].total} - ${Math.abs(this.data.data.attributes.penaltyPoints)}`;
         return this.rollScore(CONFIG.MNM3E.defenses[defenseId], formula);
     }
+
+    /*async rollSkill(skillId, subskillId) {
+        const skill = this.data.data.skills[skillId];
+        console.log(skill)
+        let total = 0;
+        let label = '';
+        
+       
+        if (skill.type == 'static') {
+            total = skill.data.total;
+            label = CONFIG.MNM3E.skills[skillId];
+        }
+        else if (subskillId) {
+            total = skill.data[subskillId].total;
+            label = skill.data[subskillId].displayName;
+        }
+        else {
+            total = skill.base;
+            label = CONFIG.MNM3E.skills[skillId];
+        }
+        console.log(total)    
+
+        if (skill.trainedOnly && !skill.isTrained) {
+            return displayCard('basic-roll', ChatMessage.getSpeaker({ actor: this, token: this.token }), {
+                actor: this.data,
+                config: CONFIG.MNM3E,
+                data: this.data.data,
+                cardLabel: label,
+                content: game.i18n.localize('MNM3E.CannotRollUntrainedSkill'),
+            });
+        }
+
+        const templateData = {
+            actor: this.data,
+            config: CONFIG.MNM3E,
+            data: this.data.data,
+            cardLabel: label,
+            rollTemplate: await roll.render(),
+        };
+
+        return displayCard('check', ChatMessage.getSpeaker({ actor: this, token: this.token }), total, label);
+    }*/
+
+
     async rollSkill(skillId, subskillId) {
         const skill = this.data.data.skills[skillId];
         let total = 0;
@@ -165,13 +213,18 @@ export default class Actor3e extends Actor {
         }
         return this.rollScore(label, total);
     }
+
     async rollScore(scoreLabel, scoreFormula) {
+        let rollObject = new Roll(`1d20 + ${scoreFormula}`)
+        rollObject.evaluate();
+        
         const templateData = {
             actor: this.data,
             config: CONFIG.MNM3E,
             data: this.data.data,
             cardLabel: scoreLabel,
-            rollTemplate: await new Roll(`1d20 + ${scoreFormula}`).render(),
+            roll: rollObject,
+            rollTemplate: await rollObject.render()
         };
         return displayCard('basic-roll', ChatMessage.getSpeaker({ actor: this, token: this.token }), templateData);
     }
