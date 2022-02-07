@@ -4,6 +4,8 @@ export const preloadTemplates = async function () {
         // Actor
         "systems/mnm3e/templates/actors/parts/character-core.html",
         "systems/mnm3e/templates/actors/parts/character-catalog.html",
+        "systems/mnm3e/templates/actors/parts/character-origins.html",
+        "systems/mnm3e/templates/actors/parts/character-notes.html",
         "systems/mnm3e/templates/actors/parts/actor-effects.html",
         "systems/mnm3e/templates/actors/parts/actor-notes.html",
         "systems/mnm3e/templates/actors/parts/npc-core.html",

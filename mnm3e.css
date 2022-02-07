@@ -213,6 +213,46 @@
   font-size: 20px;
   font-weight: bold;
 }
+.mnm3e.sheet.actor .origins .character-details {
+  font-family: "Raider Crusader", sans-serif;
+  background: #e4e4e491;
+  border-radius: 5px;
+  margin: 8px;
+  padding: 4px;
+  height: 75px;
+}
+.mnm3e.sheet.actor .origins .character-details .details-title {
+  flex: 0 1 auto;
+  border-bottom: 1px groove rgba(25, 140, 255, 0.1);
+  font-family: "Raider Crusader", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.mnm3e.sheet.actor .origins .character-details .details-row {
+  font-family: "Raider Crusader", sans-serif;
+  background: #e4e4e491;
+  border-radius: 5px;
+  margin-top: 0px;
+  padding: 4px;
+  height: 50px;
+}
+.mnm3e.sheet.actor .origins .background-entries {
+  font-family: "Raider Crusader", sans-serif;
+  background: #e4e4e491;
+  border-radius: 5px;
+  margin: 8px;
+  padding: 4px;
+  min-height: 200px;
+}
+.mnm3e.sheet.actor .origins .background-entries .article-title {
+  flex: 0 1 auto;
+  border-bottom: 1px groove rgba(25, 140, 255, 0.1);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  font-family: "Raider Crusader", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
 .mnm3e.sheet.actor .notes .notes-entries article {
   position: relative;
   overflow: hidden;

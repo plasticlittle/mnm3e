@@ -71,7 +71,12 @@
                     "baseOfOperations": "",
                     "background": "",
                     "notes": "",
-                    "complications": ""
+                    "complications": "",
+                    "age": "",
+                    "eyes": "",
+                    "height": "",
+                    "weight": "",
+                    "hair": ""
                 }
             },
             "creature": {

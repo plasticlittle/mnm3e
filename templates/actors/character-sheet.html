@@ -72,6 +72,7 @@
     </section>
     <nav class="sheet-navigation tabs" data-group="primary">
         <a class="item active" data-tab="core"> {{ localize "MNM3E.Core" }}</a>
+        <a class="item" data-tab="origins">{{ localize "MNM3E.Origins" }}</a>
         <a class="item" data-tab="catalog">{{ localize "MNM3E.Catalog" }}</a>
         <a class="item" data-tab="notes">{{ localize "MNM3E.Notes" }}</a>
         <a class="item" data-tab="effects">{{ localize "MNM3E.Effects" }}</a>
@@ -80,11 +81,14 @@
         <div class="tab core flexrow" data-group="primary" data-tab="core">
             {{> "systems/mnm3e/templates/actors/parts/character-core.html" }}
         </div>
+        <div class="tab origins" data-group="primary" data-tab="origins">
+            {{> "systems/mnm3e/templates/actors/parts/character-origins.html" }}
+        </div>
         <div class="tab powers" data-group="primary" data-tab="catalog">
             {{> "systems/mnm3e/templates/actors/parts/character-catalog.html" }}
         </div>
         <div class="tab notes" data-group="primary" data-tab="notes">
-            {{> "systems/mnm3e/templates/actors/parts/actor-notes.html" }}
+            {{> "systems/mnm3e/templates/actors/parts/character-notes.html" }}
         </div>
         <div class="tab effects" data-group="primary" data-tab="effects">
             {{> "systems/mnm3e/templates/actors/parts/actor-effects.html" }}
