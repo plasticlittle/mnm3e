@@ -1,13 +1,15 @@
+{{log "Start basic-roll-card"}}
 <div class="mnm3e chat-card basic-roll-card" data-actor-id="{{actor._id}}">
     <header class="card-header flexrow">
         <img src="{{actor.img}}" title="{{actor.name}}" width="36" height="36" />
-        <h3 class="check-type">{{ cardLabel }}</h3>
+        <h3 class="check-type">{{ templateContent.cardLabel }}</h3>
     </header>
     <div class="card-content flexcol">
-        {{#if content }}
+        {{#if templateContent.rollTemplate }}
             <p>
-                {{ content }}
+                {{{ templateContent.rollTemplate }}}
             </p>
         {{/if}}
-    {{{ rollTemplate }}}</div>
+    </div>
 </div>
+{{log "End basic-roll-card"}}

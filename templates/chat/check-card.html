@@ -4,6 +4,7 @@
         <h3 class="check-type">{{ cardLabel }}</h3>
     </header>
     <div class="card-content flexcol">
+        {{ log cardLabel }}
         {{{ rollTemplate }}}
         {{#if degrees}}
             <h3>
