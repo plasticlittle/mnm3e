@@ -228,7 +228,7 @@
   font-size: 20px;
   font-weight: bold;
 }
-.mnm3e.sheet.actor .origins .character-details .details-row {
+.mnm3e.sheet.actor .origins .character-details .details-row1 {
   font-family: "Raider Crusader", sans-serif;
   background: #e4e4e491;
   border-radius: 5px;
@@ -245,6 +245,23 @@
   min-height: 200px;
 }
 .mnm3e.sheet.actor .origins .background-entries .article-title {
+  flex: 0 1 auto;
+  border-bottom: 1px groove rgba(25, 140, 255, 0.1);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  font-family: "Raider Crusader", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.mnm3e.sheet.actor .origins .origin-entries {
+  font-family: "Raider Crusader", sans-serif;
+  background: #e4e4e491;
+  border-radius: 5px;
+  margin: 8px;
+  padding: 4px;
+  min-height: 200px;
+}
+.mnm3e.sheet.actor .origins .origin-entries .article-title {
   flex: 0 1 auto;
   border-bottom: 1px groove rgba(25, 140, 255, 0.1);
   margin-bottom: 0.5rem;

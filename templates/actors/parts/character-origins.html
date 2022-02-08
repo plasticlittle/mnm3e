@@ -2,29 +2,41 @@
     <div>
         <h3 class="details-title">{{ localize "MNM3E.CDetails" }}</h3>
     </div>
-    <div class="character-details details-row flexrow">
-        <div>
-          <input name="data.age" type="number" value="{{data.data.age}}" placeholder="{{localize 'MNM3E.Age'}}" />
-        </div>
-        <div>
-          <input name="data.height" type="text" value="{{data.data.height}}" placeholder="{{localize 'MNM3E.Height'}}" />
-        </div>
-        <div>
-          <input name="data.weight" type="text" value="{{data.data.weight}}" placeholder="{{localize 'MNM3E.Weight'}}" />
-        </div>
-        <div>
-          <input name="data.eyes" type="text" value="{{data.data.eyes}}" placeholder="{{localize 'MNM3E.Eyes'}}" />
-        </div>
-        <div>
-          <input name="data.hair" type="text" value="{{data.data.hair}}" placeholder="{{localize 'MNM3E.Hair'}}" />
-        </div>
+    <div class="character-details details-row1 flexrow">
+      <div>
+        <input name="data.gender" type="text" value="{{data.data.gender}}" placeholder="{{localize 'MNM3E.Gender'}}" />
+      </div>
+      <div>
+        <input name="data.age" type="number" value="{{data.data.age}}" placeholder="{{localize 'MNM3E.Age'}}" />
+      </div>
+      <div>
+        <input name="data.height" type="text" value="{{data.data.height}}" placeholder="{{localize 'MNM3E.Height'}}" />
+      </div>
+      <div>
+        <input name="data.weight" type="text" value="{{data.data.weight}}" placeholder="{{localize 'MNM3E.Weight'}}" />
+      </div>
+      <div>
+        <input name="data.eyes" type="text" value="{{data.data.eyes}}" placeholder="{{localize 'MNM3E.Eyes'}}" />
+      </div>
+      <div>
+        <input name="data.hair" type="text" value="{{data.data.hair}}" placeholder="{{localize 'MNM3E.Hair'}}" />
+      </div>
     </div>
 </div>
 <div class="background-info flexrow">
     <div class="background-entries background-notes flexcol">
         <article class="flexcol">
             <h3 class="article-title">{{ localize "MNM3E.Background" }}</h3>
-            {{editor content=data.data.info.background target="data.data.info.background" button=true owner=owner editable=editable}}
+            {{editor content=data.data.info.background target="data.info.background" button=true owner=owner editable=editable}}
         </article>
     </div>
 </div>
+<div class="origin-info flexrow">
+  <div class="origin-entries origin-notes flexcol">
+      <article class="flexcol">
+          <h3 class="article-title">{{ localize "MNM3E.Origins" }}</h3>
+          {{editor content=data.data.info.origins target="data.info.origins" button=true owner=owner editable=editable}}
+      </article>
+  </div>
+</div>
+{{log data}}

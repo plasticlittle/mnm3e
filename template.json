@@ -72,11 +72,13 @@
                     "background": "",
                     "notes": "",
                     "complications": "",
+                    "gender": "",
                     "age": "",
                     "eyes": "",
                     "height": "",
                     "weight": "",
-                    "hair": ""
+                    "hair": "",
+                    "origins": ""
                 }
             },
             "creature": {

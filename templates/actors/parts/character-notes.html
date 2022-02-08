@@ -1,16 +1,14 @@
 <div class="notes-entries complication-notes flexcol">
     <article class="flexcol">
-        <h3 class="article-title">
-            {{ localize "MNM3E.Complications" }}
-        </h3>
-        {{editor content=data.data.info.complications target="data.data.info.complications" button=true owner=owner editable=editable}}
+        <h3 class="article-title">{{ localize "MNM3E.Complications" }}</h3>
+        {{editor content=data.data.info.complications target="data.info.complications" button=true owner=owner editable=editable}}
     </article>
 </div>
 <div class="background-info flexrow">
         <div class="notes-entries journal-notes right-notes flexcol">
             <article class="flexcol">
                 <h3 class="article-title">{{ localize "MNM3E.Notes" }}</h3>
-                {{editor content=data.data.info.notes target="data.data.info.notes" button=true owner=owner editable=editable}}
+                {{editor content=data.data.info.notes target="data.info.notes" button=true owner=owner editable=editable}}
             </article>
         </div>
     </div>
