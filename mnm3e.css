@@ -107,6 +107,8 @@
   max-width: 164px;
   height: 164px;
   margin-right: 0;
+  border: none;
+  max-width: 100%;
 }
 .mnm3e.sheet.actor .sheet-header .header-details {
   height: 100%;
@@ -116,6 +118,8 @@
   border-top: 1px solid rgba(20, 90, 160, 0.2);
 }
 .mnm3e.sheet.actor .sheet-header .header-details .summary li {
+  background: #e4e4e491;
+  border-radius: 5px;
   border-right: 1px solid rgba(20, 90, 160, 0.2);
 }
 .mnm3e.sheet.actor .sheet-header .header-details .summary li:last-child {
@@ -131,6 +135,8 @@
   border-top: 1px solid rgba(20, 90, 160, 0.2);
   font-family: "Raider Crusader", sans-serif;
   text-align: center;
+  background: #e4e4e491;
+  border-radius: 5px;
   border-left: 1px solid rgba(20, 90, 160, 0.2);
   border-right: 1px solid rgba(20, 90, 160, 0.2);
   font-family: "Raider Crusader", sans-serif;
@@ -322,7 +328,7 @@
   padding: 0 10px;
   border: 1px solid #145aa0;
   border-radius: 0 5px 0 5px;
-  background: rgba(128, 128, 128, 0.1);
+  background: #e4e4e491;
   font-family: "Raider Crusader", sans-serif;
 }
 .mnm3e.sheet.actor.character .sheet-header .header-details .top-info .header-powerlevel .header-power {
@@ -362,6 +368,8 @@
   text-align: center;
   font-family: "Raider Crusader", sans-serif;
   font-size: 12px;
+  background: #e4e4e491;
+  border-radius: 5px;
 }
 .mnm3e.sheet.actor.character .cost-breakdown .point-cost span {
   font-family: "Raider Crusader", sans-serif;
@@ -620,7 +628,10 @@
   border: 1px solid black;
   font-family: "Raider Crusader", sans-serif;
 }
-
+.mnm3e.sheet header.sheet-header h1 input {
+  background: #e4e4e491;
+  border-radius: 5px;
+}
 .mnm3e.chat-card .hidable-toggle:hover {
   text-shadow: 0 0 8px red;
 }
