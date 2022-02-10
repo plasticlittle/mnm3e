@@ -696,10 +696,10 @@
 
 #chat-log .chat-message {
   font-family: "Raider Crusader", sans-serif;
-  text-shadow: 2px 2px #9b9696;
+  /* text-shadow: 2px 2px #9b9696; */
   color: honeydew;
-  background: url(/systems/mnm3e/assets/images/chat.png);
-  background-size: cover;
+  background: url(/systems/mnm3e/assets/images/chatbubble.png);
+  background-size: contain;
 }
 #chat-log .chat-message .effect-button {
   background: #e4e4e491;
