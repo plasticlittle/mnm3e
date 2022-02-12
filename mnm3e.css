@@ -644,7 +644,7 @@
   flex: 0 0 36px;
 }
 .mnm3e.chat-card .card-header h3 {
-  padding-left: 5px;
+  padding-left: 30px;
   line-height: 36px;
   margin: 0;
 }
@@ -723,11 +723,15 @@
   margin: 0;
   line-height: 24px;
   text-align: center;
-  background: rgba(197, 197, 197, 0.712);
+  background: rgba(197, 197, 197, 0.212);
   border: 1px solid var(--color-border-light-2);
   border-radius: 3px;
   box-shadow: 0 0 2px #fff inset;
   word-break: break-all;
+}
+.dice-tooltip .part-header .part-formula {
+  font-weight: normal;
+  flex: 1;
 }
 
 .four-fail, .three-fail, .two-fail, .one-fail, .one-success, .two-success, .three-success, .four-success {
