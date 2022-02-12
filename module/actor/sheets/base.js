@@ -74,6 +74,8 @@ export default class ActorSheet3e extends ActorSheet {
             'power',
             'advantage',
             'equipment',
+            'vehicle',
+            'base',
         ].forEach(itemType => html.find(`.item-${itemType}-controls .item-control`).on('click', this.onEmbeddedItemEvent.bind(this)));
         if (this.actor.isOwner) {
             html.find('.item .item-image').on('click', this.onItemRoll.bind(this));
@@ -86,6 +88,8 @@ export default class ActorSheet3e extends ActorSheet {
         const powers = [];
         const advantages = [];
         const equipment = [];
+        const vehicle = [];
+        const base = [];
         data.items.reduce((arr, item) => {
             let targetArray;
             switch (item.type) {
@@ -97,13 +101,17 @@ export default class ActorSheet3e extends ActorSheet {
                     break;
                 case 'equipment':
                     targetArray = arr[2];
+                case 'vehicle':
+                    targetArray = arr[3];
+                case 'base':
+                    targetArray = arr[4];
             }
             if (!targetArray) {
                 return arr;
             }
             targetArray.push(item);
             return arr;
-        }, [powers, advantages, equipment]);
+        }, [powers, advantages, equipment, vehicle, base]);
         // Additional headers for item lists
         const standardHeaders = ['MNM3E.Activation', 'MNM3E.Action'].map(l => game.i18n.localize(l));
         data.powers = powers;
@@ -128,6 +136,22 @@ export default class ActorSheet3e extends ActorSheet {
             rows: equipment.map(e => [
                 CONFIG.MNM3E.activationTypes[e.data.effects[0]?.data.activation.type.value],
                 CONFIG.MNM3E.actionTypes[e.data.effects[0]?.data.action.type.value],
+            ]),
+        };
+        data.vehicle = vehicle;
+        data.vehicleSections = {
+            headers: standardHeaders,
+            rows: vehicle.map(v => [
+                CONFIG.MNM3E.activationTypes[v.data.effects[0]?.data.activation.type.value],
+                CONFIG.MNM3E.actionTypes[v.data.effects[0]?.data.action.type.value],
+            ]),
+        };
+        data.base = base;
+        data.baseSections = {
+            headers: standardHeaders,
+            rows: base.map(b => [
+                CONFIG.MNM3E.activationTypes[b.data.effects[0]?.data.activation.type.value],
+                CONFIG.MNM3E.actionTypes[b.data.effects[0]?.data.action.type.value],
             ]),
         };
     }

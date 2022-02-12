@@ -6,7 +6,7 @@ export const onActiveEffect = (actor, change) => {
     if (item) {
         data = item.data;
     }
-    else if (['advantage', 'power', 'equipment'].includes(parent.data.type)) {
+    else if (['advantage', 'power', 'equipment', 'vehicle', 'base'].includes(parent.data.type)) {
         data = change.effect.parent.data.data.effects.find((mnmEffect) => mnmEffect.effects.find((e) => e._id == change.effect.data._id));
     }
     else {

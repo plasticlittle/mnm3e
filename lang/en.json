@@ -93,6 +93,7 @@
     "MNM3E.Background": "Background",
     "MNM3E.BaseOfOperations": "Base of Operations",
     "MNM3E.Biography": "Biography",
+    "MNM3E.Base": "Base",
 
     "MNM3E.CannotRollUntrainedSkill": "Cannot roll untrained skills.",
 
@@ -174,6 +175,8 @@
     "MNM3E.Favorite": "Favorite",
     "MNM3E.FavoriteAdvantages": "Favorite Advantages",
     "MNM3E.FavoriteEquipment": "Favorite Equipment",
+    "MNM3E.FavoriteVehicle": "Favorite Vehicle",
+    "MNM3E.FavoriteBase": "Favorite Base",
     "MNM3E.FavoritePowers": "Favorite Powers",
     "MNM3E.Formula": "Formula",
     "MNM3E.FormulaBuilder": "Formula Builder",
@@ -317,6 +320,8 @@
 
     "MNM3E.Versus": "Versus",
     "MNM3E.VersusAbbrev": "vs",
+
+    "MNM3E.Vehicles": "Vehicles",
 
     "MNM3E.VictoryPoints": "Victory Points",
 

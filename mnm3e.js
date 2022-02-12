@@ -72,6 +72,11 @@ Hooks.once('init', async function () {
         makeDefault: true,
         label: 'MNM3E.SheetClassItem',
     });
+    /* Items.registerSheet('mnm3e', ItemSheet3eVehicle, {
+        types: ['vehicle'],
+        makeDefault: true,
+        label: 'MNM3E.SheetClassItem',
+    }); */
     Items.registerSheet('mnm3e', ItemSheet3eEffect, {
         types: ['effect'],
         makeDefault: true,

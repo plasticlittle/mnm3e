@@ -5,7 +5,7 @@ export default class ItemSheet3eEquipment extends ItemSheet3e {
      */
     static get defaultOptions() {
         const opts = super.defaultOptions;
-        opts.classes?.push('power', 'equipment');
+        opts.classes?.push('power', 'equipment', 'vehicle', 'base');
         return mergeObject(opts, {
             template: 'systems/mnm3e/templates/items/power-sheet.html',
         });

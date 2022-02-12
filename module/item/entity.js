@@ -14,7 +14,7 @@ export default class Item3e extends Item {
      * @override
      */
     prepareEmbeddedEntities() {
-        if (['power', 'equipment'].includes(this.type)) {
+        if (['power', 'equipment', 'vehicle', 'base'].includes(this.type)) {
             const data = this.data;
             data.effects = [];
             data.data.effects.forEach(effect => {

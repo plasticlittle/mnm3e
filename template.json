@@ -253,7 +253,7 @@
         }
     },
     "Item": {
-        "types": ["advantage", "effect", "equipment", "modifier", "power"],
+        "types": ["advantage", "effect", "equipment", "modifier", "power", "vehicle", "base"],
         "templates": {
             "itemDescription": {
                 "description": {
@@ -396,6 +396,16 @@
             "descriptor": ""
         },
         "equipment": {
+            "templates": ["itemDescription"],
+            "effects": [],
+            "descriptor": ""
+        },
+        "vehicle": {
+            "templates": ["itemDescription"],
+            "effects": [],
+            "descriptor": ""
+        },
+        "base": {
             "templates": ["itemDescription"],
             "effects": [],
             "descriptor": ""
