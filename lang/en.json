@@ -85,6 +85,7 @@
     "MNM3E.Area": "Area",
 
     "MNM3E.Age": "Age",
+    "MNM3E.Assets": "Assets",
 
     "MNM3E.Attack": "Attack",
     "MNM3E.AttackCheck": "Attack Check",
@@ -220,6 +221,7 @@
 
     "MNM3E.OK": "Ok",
     "MNM3E.Origins": "Origins",
+    "MNM3E.OriginStory": "Origin Story",
 
     "MNM3E.OptionEnableDegreeCalculator": "Enable Degree Calculator",
     "MNM3E.OptionEnableDegreeCalculatorHint": "Adds a calculator to the bottom of the chat sidebar.",
@@ -244,6 +246,8 @@
     "MNM3E.RankCostTypeFlat": "Flat",
     "MNM3E.RankCostTypePerRank": "Per Rank",
     "MNM3E.RankCostTypeDiscount": "Discount",
+
+    "MNM3E.Relationships": "Relationships",
 
     "MNM3E.Required": "Required",
     "MNM3E.ResistCheck": "Resist Check",

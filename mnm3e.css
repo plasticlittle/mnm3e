@@ -299,9 +299,13 @@
 .mnm3e.sheet.actor .notes .background-info {
   height: auto;
 }
+.mnm3e.sheet.actor .notes .notes-info {
+  height: auto;
+}
 .mnm3e.sheet.actor .equipment-properties label {
   flex: 0 1 auto;
   margin-right: 5px;
+  font-family: "Raider Crusader", sans-serif;
 }
 
 .mnm3e.sheet.actor.character h4.box-title {

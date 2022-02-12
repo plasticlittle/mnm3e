@@ -150,14 +150,14 @@ export default class ActorSheet3e extends ActorSheet {
                     img: 'icons/svg/upgrade.svg',
                     type: itemType,
                 };
-                this.actor.createOwnedItem(itemData);
+                this.actor.createEmbeddedDocuments("Item", [itemData]);
                 break;
             case 'edit':
                 item = this.actor.items.get(closestItem?.dataset.itemId);
                 item?.sheet.render(true);
                 break;
             case 'delete':
-                this.actor.deleteOwnedItem(closestItem?.dataset.itemId);
+                this.actor.deleteEmbeddedDocuments("Item", [closestItem?.dataset.itemId]);
                 break;
             case 'favorite':
                 const favoriteKey = 'isFavorite';

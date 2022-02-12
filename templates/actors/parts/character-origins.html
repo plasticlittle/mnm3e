@@ -34,8 +34,14 @@
 <div class="origin-info flexrow">
   <div class="origin-entries origin-notes flexcol">
       <article class="flexcol">
-          <h3 class="article-title">{{ localize "MNM3E.Origins" }}</h3>
+          <h3 class="article-title">{{ localize "MNM3E.OriginStory" }}</h3>
           {{editor content=data.data.info.origins target="data.info.origins" button=true owner=owner editable=editable}}
       </article>
   </div>
+  <div class="origin-entries origin-notes flexcol">
+    <article class="flexcol">
+        <h3 class="article-title">{{ localize "MNM3E.Relationships" }}</h3>
+        {{editor content=data.data.info.relationships target="data.info.relationships" button=true owner=owner editable=editable}}
+    </article>
+</div>
 </div>

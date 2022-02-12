@@ -4,11 +4,17 @@
         {{editor content=data.data.info.complications target="data.info.complications" button=true owner=owner editable=editable}}
     </article>
 </div>
-<div class="background-info flexrow">
-        <div class="notes-entries journal-notes right-notes flexcol">
-            <article class="flexcol">
-                <h3 class="article-title">{{ localize "MNM3E.Notes" }}</h3>
-                {{editor content=data.data.info.notes target="data.info.notes" button=true owner=owner editable=editable}}
-            </article>
-        </div>
+<div class="notes-info flexrow">
+    <div class="notes-entries journal-notes left-notes flexcol">
+        <article class="flexcol">
+            <h3 class="article-title">{{ localize "MNM3E.Assets" }}</h3>
+            {{editor content=data.data.info.assets target="data.info.assets" button=true owner=owner editable=editable}}
+        </article>
     </div>
+    <div class="notes-entries journal-notes right-notes flexcol">
+        <article class="flexcol">
+            <h3 class="article-title">{{ localize "MNM3E.Notes" }}</h3>
+            {{editor content=data.data.info.notes target="data.info.notes" button=true owner=owner editable=editable}}
+        </article>
+    </div>
+</div>
