@@ -36,6 +36,8 @@
     "ITEM.TypeEquipment": "Equipment",
     "ITEM.TypeModifier": "Modifier",
     "ITEM.TypePower": "Power",
+    "ITEM.TypeVehicle": "Vehicle",
+    "ITEM.TypeBase": "Base",
 
     "MNM3E.Abilities": "Abilities",
     "MNM3E.AbilityScores": "Ability Scores",
