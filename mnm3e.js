@@ -17,6 +17,8 @@ import ActorSheet3eCharacter from "./module/actor/sheets/character.js";
 import ActorSheet3eNPC from "./module/actor/sheets/npc.js";
 import Item3e from "./module/item/entity.js";
 import ItemSheet3eAdvantage from "./module/item/sheets/advantage.js";
+import ItemSheet3eVehicle from "./module/item/sheets/vehicle.js";
+import ItemSheet3eBases from "./module/item/sheets/bases.js";
 import ItemSheet3ePower from "./module/item/sheets/power.js";
 import ItemSheet3eEffect from "./module/item/sheets/effect.js";
 import ItemSheet3eEquipment from "./module/item/sheets/equipment.js";
@@ -72,11 +74,16 @@ Hooks.once('init', async function () {
         makeDefault: true,
         label: 'MNM3E.SheetClassItem',
     });
-    /* Items.registerSheet('mnm3e', ItemSheet3eVehicle, {
+    Items.registerSheet('mnm3e', ItemSheet3eVehicle, {
         types: ['vehicle'],
         makeDefault: true,
         label: 'MNM3E.SheetClassItem',
-    }); */
+    });
+    Items.registerSheet('mnm3e', ItemSheet3eBases, {
+        types: ['base'],
+        makeDefault: true,
+        label: 'MNM3E.SheetClassItem',
+    });
     Items.registerSheet('mnm3e', ItemSheet3eEffect, {
         types: ['effect'],
         makeDefault: true,
