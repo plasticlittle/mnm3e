@@ -101,10 +101,13 @@ export default class ActorSheet3e extends ActorSheet {
                     break;
                 case 'equipment':
                     targetArray = arr[2];
+                    break;
                 case 'vehicle':
                     targetArray = arr[3];
+                    break;
                 case 'base':
                     targetArray = arr[4];
+                    break;
             }
             if (!targetArray) {
                 return arr;
