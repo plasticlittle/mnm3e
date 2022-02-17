@@ -1,9 +1,11 @@
 <form class="{{cssClass}} item-sheet-advantage flexcol" autocomplete="off">
       <header class="sheet-header flexrow">{{> "systems/mnm3e/templates/items/parts/header-sheet.html" showSummary=true }}
       </header>
-      <nav class="sheet-navigation tabs" data-group="primary"><a class="item active" data-tab="description">{{ localize
-              "MNM3E.Description" }}</a><a class="item" data-tab="details">{{ localize "MNM3E.Details" }}</a><a
-              class="item" data-tab="effects">{{ localize "MNM3E.Effects" }}</a></nav>
+      <nav class="sheet-navigation tabs" data-group="primary">
+          <a class="item active" data-tab="description">{{ localize "MNM3E.Description" }}</a>
+          <a class="item" data-tab="details">{{ localize "MNM3E.Details" }}</a>
+          <a class="item" data-tab="effects">{{ localize "MNM3E.Effects" }}</a>
+        </nav>
       <section class="sheet-body">
           <div class="tab description flexrow active" data-group="primary" data-tab="description">
               <div class="item-properties flexcol">{{> "systems/mnm3e/templates/items/parts/cost-sheet.html" }}</div>
@@ -11,12 +13,51 @@
               {{log data}}
               {{editor content=data.data.description.value target="data.description.value" button=true owner=owner editable=editable}}
           </div>
-          <div class="tab details" data-group="primary" data-tab="details">{{>
-              "systems/mnm3e/templates/items/parts/activations-sheet.html" }}
-              {{> "systems/mnm3e/templates/items/parts/actions-sheet.html" }}
+          <div class="tab details" data-group="primary" data-tab="details">
+            <div class="vehicle-details flexcol">
+                <div>
+                    <h3 class="details-title">{{ localize "MNM3E.VDetails" }}</h3>
+                </div>
+                <div class="vehicle-details-box flexcol">
+                    <div class="vehicle-details details-row1 flexrow">
+                        <div class="vehicle-details-input">
+                            <h3 class="details-label">{{ localize "MNM3E.Size" }}</h3>
+                        </div>
+                        <div>
+                            <h3 class="details-label">{{ localize "MNM3E.Strength" }}</h3>
+                        </div>
+                        <div>
+                            <h3 class="details-label">{{ localize "MNM3E.Speed" }}</h3>
+                        </div>
+                        <div>
+                            <h3 class="details-label">{{ localize "MNM3E.Defense" }}</h3>
+                        </div>
+                        <div>
+                            <h3 class="details-label">{{ localize "MNM3E.Toughness" }}</h3>
+                        </div>
+                    </div>
+                    <div class="vehicle-details details-row2 flexrow">
+                        <div>
+                        <input name="data.size" type="text" value="{{data.data.size}}" placeholder="{{localize 'MNM3E.Size'}}" />
+                        </div>
+                        <div>
+                            <input name="data.strength" type="number" value="{{data.data.strength}}" placeholder="{{localize 'MNM3E.Strength'}}" />
+                        </div>
+                        <div>
+                            <input name="data.speed" type="text" value="{{data.data.speed}}" placeholder="{{localize 'MNM3E.Speed'}}" />
+                        </div>
+                        <div>
+                            <input name="data.defense" type="text" value="{{data.data.defense}}" placeholder="{{localize 'MNM3E.Defense'}}" />
+                        </div>
+                        <div>
+                            <input name="data.toughness" type="text" value="{{data.data.toughness}}" placeholder="{{localize 'MNM3E.Toughness'}}" />
+                        </div>
+                    </div>
+                </div>
+            </div>
           </div>
-          <div class="tab effects" data-group="primary" data-tab="effects">{{>
-              "systems/mnm3e/templates/actors/parts/actor-effects.html" }}
+          <div class="tab effects" data-group="primary" data-tab="effects">
+              {{> "systems/mnm3e/templates/actors/parts/actor-effects.html" }}
           </div>
       </section>
   </form>

@@ -403,12 +403,26 @@
         "vehicle": {
             "templates": ["itemSummary", "itemDescription", "activatedEffect", "actionEffect", "scalingEffect"],
             "effects": [],
-            "descriptor": ""
+            "descriptor": "",
+            "info":{
+                "size": "",
+                "strength": "",
+                "speed": "",
+                "defense": "",
+                "toughness": "",
+                "powers": "",
+                "features": ""
+            }
         },
         "base": {
             "templates": ["itemDescription"],
             "effects": [],
-            "descriptor": ""
+            "descriptor": "",
+            "info":{
+                "size": "",
+                "toughness": "",
+                "features": ""
+            }
         }
     }
 }

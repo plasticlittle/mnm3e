@@ -1,5 +1,5 @@
 import ItemSheet3e from "./base.js";
-export default class ItemSheet3eAdvantage extends ItemSheet3e {
+export default class ItemSheet3eVehicle extends ItemSheet3e {
     /**
      * @override
      */

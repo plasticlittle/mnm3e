@@ -133,6 +133,7 @@
     "MNM3E.Description": "Description",
     "MNM3E.Descriptor": "Descriptor",
     "MNM3E.Details": "Details",
+    "MNM3E.Defense": "Defense",
 
     "MNM3E.DistanceInches": "inches",
     "MNM3E.DistanceInchesAbbrev": "in.",
@@ -268,6 +269,8 @@
     "MNM3E.SheetClassCharacter": "Default 3e Character Sheet",
     "MNM3E.SheetClassItem": "Default 3e Item Sheet",
 
+    "MNM3E.Size": "Size",
+
     "MNM3E.Skills": "Skills",
     "MNM3E.SkillAcr": "Acrobatics",
     "MNM3E.SkillAth": "Athletics",
@@ -285,6 +288,9 @@
     "MNM3E.SkillTec": "Technology",
     "MNM3E.SkillTre": "Treatment",
     "MNM3E.SkillVhc": "Vehicle",
+
+    "MNM3E.Strength": "Strength",
+    "MNM3E.Speed": "Speed",
 
     "MNM3E.SummaryBuilder": "Summary Builder",
     "MNM3E.SummaryFormat": "Summary Format",
@@ -305,6 +311,8 @@
     "MNM3E.TargetShapeable": "Shapeable",
     "MNM3E.TotalCostFormat": "Total Cost: {amount}",
 
+    "MNM3E.Toughness": "Toughness",
+
     "MNM3E.TimeSeconds": "seconds",
     "MNM3E.TimeSecondsAbbrev": "sec.",
     "MNM3E.TimeMinutes": "minutes",
@@ -324,6 +332,7 @@
     "MNM3E.VersusAbbrev": "vs",
 
     "MNM3E.Vehicles": "Vehicles",
+    "MNM3E.VDetails": "Vehicle Details",
 
     "MNM3E.VictoryPoints": "Victory Points",
 

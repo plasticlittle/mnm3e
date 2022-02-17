@@ -222,10 +222,11 @@
 .mnm3e.sheet.actor .origins .character-details {
   font-family: "Raider Crusader", sans-serif;
   background: #e4e4e491;
+  border-bottom: 1px groove rgba(25, 140, 255, 0.1);
   border-radius: 5px;
   margin: 8px;
   padding: 4px;
-  height: 75px;
+  height: auto;
 }
 .mnm3e.sheet.actor .origins .character-details .details-title {
   flex: 0 1 auto;
@@ -234,11 +235,32 @@
   font-size: 20px;
   font-weight: bold;
 }
+.mnm3e.sheet.actor .origins .character-details-box {
+  flex: 0 1 auto;
+  background: #e4e4e491;
+  font-family: "Raider Crusader", sans-serif;
+  font-weight: bold;
+  margin-top: -5px;
+}
+.mnm3e.sheet.actor .origins .character-details-box .details-label {
+  flex: 0 1 auto;
+  font-family: "Raider Crusader", sans-serif;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
 .mnm3e.sheet.actor .origins .character-details .details-row1 {
   font-family: "Raider Crusader", sans-serif;
-  background: #e4e4e491;
-  border-radius: 5px;
-  margin-top: 0px;
+  border-bottom: 1px groove rgba(25, 140, 255, 0.1);
+  background: none;
+  margin-top: auto;
+  padding: 0px;
+  height: 50px;
+}
+.mnm3e.sheet.actor .origins .character-details .details-row2 {
+  font-family: "Raider Crusader", sans-serif;
+  background: none;
+  margin-top: -15px;
+  margin-bottom: auto;
   padding: 4px;
   height: 50px;
 }
@@ -619,6 +641,49 @@
 }
 .mnm3e.sheet .tab .form-group {
   flex: 0 0 auto;
+}
+.mnm3e.sheet .details .vehicle-details {
+  font-family: "Raider Crusader", sans-serif;
+  background: #e4e4e491;
+  border-radius: 5px;
+  margin: 8px;
+  padding: 4px;
+  /* height: 75px; */
+}
+.mnm3e.sheet .details .vehicle-details .details-title {
+  flex: 0 1 auto;
+  border-bottom: 1px groove rgba(25, 140, 255, 0.1);
+  font-family: "Raider Crusader", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.mnm3e.sheet .details .vehicle-details-box {
+  flex: 0 1 auto;
+  background: #e4e4e491;
+  border-bottom: 1px groove rgba(25, 140, 255, 0.1);
+  font-family: "Raider Crusader", sans-serif;
+  font-weight: bold;
+}
+.mnm3e.sheet .details .vehicle-details-box .details-label {
+  flex: 0 1 auto;
+  border-bottom: 1px groove rgba(25, 140, 255, 0.1);
+  font-family: "Raider Crusader", sans-serif;
+  font-weight: bold;
+}
+.mnm3e.sheet .details .vehicle-details-box .details-row1 {
+  font-family: "Raider Crusader", sans-serif;
+  background: none;
+  margin-top: 0px;
+  padding: 0px;
+  height: 50px;
+}
+.mnm3e.sheet .details .vehicle-details-box .details-row2 {
+  font-family: "Raider Crusader", sans-serif;
+  background: none;
+  margin-top: -21px;
+  margin-bottom: auto;
+  padding: 4px;
+  height: 50px;
 }
 .mnm3e.sheet input[type=text],
 .mnm3e.sheet input[type=number] {
