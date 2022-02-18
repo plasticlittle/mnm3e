@@ -685,6 +685,23 @@
   padding: 4px;
   height: 50px;
 }
+.mnm3e.sheet .details .vehicle-power .article-title {
+  flex: 0 1 auto;
+  border-bottom: 1px groove rgba(25, 140, 255, 0.1);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  font-family: "Raider Crusader", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.mnm3e.sheet .details .vehicle-entries {
+  font-family: "Raider Crusader", sans-serif;
+  background: #e4e4e491;
+  border-radius: 5px;
+  margin: 8px;
+  padding: 4px;
+  min-height: 200px;
+}
 .mnm3e.sheet input[type=text],
 .mnm3e.sheet input[type=number] {
   background: none;

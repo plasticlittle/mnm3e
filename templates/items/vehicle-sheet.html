@@ -55,6 +55,20 @@
                     </div>
                 </div>
             </div>
+            <div class="vehicle-power flexrow">
+                <div class="vehicle-entries detail-notes flexcol">
+                    <article class="flexcol">
+                        <h3 class="article-title">{{ localize "MNM3E.Powers" }}</h3>
+                        {{editor content=data.data.info.powers target="data.info.powers" button=true owner=owner editable=editable}}
+                    </article>
+                </div>
+                <div class="vehicle-entries detail-notes flexcol">
+                  <article class="flexcol">
+                      <h3 class="article-title">{{ localize "MNM3E.Features" }}</h3>
+                      {{editor content=data.data.info.features target="data.info.features" button=true owner=owner editable=editable}}
+                  </article>
+              </div>
+              </div>
           </div>
           <div class="tab effects" data-group="primary" data-tab="effects">
               {{> "systems/mnm3e/templates/actors/parts/actor-effects.html" }}
