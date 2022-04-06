@@ -23,7 +23,7 @@
                               <span>{{data.summary }}</span>
                         </div>
                   </div>
-                  {{editor content=data.data.description.value target="data.data.description.value" button=true owner=owner editable=editable}}
+                  {{editor content=data.data.description.value target="data.description.value" button=true owner=owner editable=editable}}
             </div>
             <div class="tab details" data-group="primary" data-tab="details">
                   {{> "systems/mnm3e/templates/items/parts/list-sheet.html" items=data.data.effects dataPath="data.data.effects" header=(localize "MNM3E.Effects") type="effect"}}
