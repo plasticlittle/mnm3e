@@ -4,5 +4,5 @@ We want to make a fully running, actual version of Mutants and Masterminds for F
 Additionally we want to implement a XML Parser to import files from Herolabs Mutants and Mastermindes Edition. <br>
 
 Credits:
-CSS Design by WookieeChan aka Matt <br>
+Initial CSS Design by WookieeChan aka Matt <br>
 initial branch from mnm3e version of matthewswar version
